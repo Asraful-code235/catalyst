@@ -4,10 +4,17 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "web:dev": "pnpm --filter ./apps/web dev",
+    "catalyst:dev": "pnpm --filter ./apps/catalyst-ui dev",
+    "docs:dev": "pnpm --filter ./apps/docs dev",
+    "web:build": "pnpm --filter ./apps/web lint && pnpm --filter ./apps/web build",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ui:add": "pnpm --filter @repo/ui ui:add"
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "^2.0.6",
     "typescript": "^5.4.5"
@@ -15,9 +22,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "npm@9.4.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "npm@9.4.0"
 }
