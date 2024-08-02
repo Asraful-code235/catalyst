@@ -12,27 +12,27 @@ const statisticsItems = [
 
 export default function Statistics() {
   return (
-    <section className="p-[20px] md:p-[94px] max-w-[1440px] mx-auto flex flex-col gap-[64px]">
-      <p className="paragraph text-2xl font-medium leading-[36px] text-left">
+    <section className="p-8 lg:p-[94px] max-w-[1440px] mx-auto flex flex-col gap-[64px]">
+      <p className="paragraph text-xs lg:text-2xl font-medium leading-[150%] lg:leading-[36px] text-left">
         With over two decades of experience, Catalyst Venture Studio specializes
         in consulting for global innovation. We guide visionary founders and
         companies from inception to market disruption. Our expertise helps
         navigate challenges, optimize operations, and drive sustainable growth.
       </p>
       <section className="flex flex-col">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-x-[90px] gap-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-x-[90px] gap-y-12 max-lg:divide-y max-lg:divide-gray-200 max-lg:gap-y-6">
           <p className="paragraph text-2xl col-span-3 font-medium leading-[36px] text-left mb-4 w-fit">
             Key Statistics
           </p>
           {statisticsItems.map((item) => (
             <div
               key={item.id}
-              className="text-center md:text-left flex flex-col gap-6 "
+              className=" col-span-3 lg:col-span-1 text-left flex flex-col gap-4 lg:gap-6 max-lg:pt-4 "
             >
-              <p className="text-5xl leading-[52.8px] font-bold text-secondary ">
+              <p className="text-2xl lg:text-5xl leading-[26.4px] lg:leading-[52.8px] font-bold text-secondary ">
                 {item.number}
               </p>
-              <p className="paragraph text-base text-left leading-6 text-gray-700 capitalize">
+              <p className="paragraph lg:text-base text-left leading-[18px] lg:leading-6 text-gray-700 capitalize">
                 {item.name}
               </p>
             </div>
@@ -45,12 +45,28 @@ export default function Statistics() {
         height="2"
         viewBox="0 0 1252 2"
         fill="none"
+        className="hidden lg:block w-full"
       >
         <path
           opacity="0.4"
           d="M1252 1L0 1"
           stroke="#1A1A1A"
           strokeWidth="0.5"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="366"
+        height="2"
+        viewBox="0 0 366 2"
+        fill="none"
+        className="-mt-10 mx-auto w-full"
+      >
+        <path
+          d="M0 1L366 1.00003"
+          stroke="#1A1A1A"
+          stroke-opacity="0.25"
+          stroke-width="0.5"
         />
       </svg>
     </section>
