@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import Tradible from "../../public/assets/case-study/catalyst homepage image blockchain copy.png";
-import Etr from "../../public/assets/case-study/catalyst homepage image ecommerce copy.png";
-import LaMemoire from "../../public/assets/case-study/catalyst homepage image public sector copy.png";
+import Tradible from "../../public/assets/case-study/catalyst homepage image blockchain copy.webp";
+import Etr from "../../public/assets/case-study/catalyst homepage image ecommerce copy.webp";
+import LaMemoire from "../../public/assets/case-study/catalyst homepage image public sector copy.webp";
 
 const caseStudyData = [
   {

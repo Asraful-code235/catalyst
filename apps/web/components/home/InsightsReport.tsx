@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InsightsReportImage from "../../public/assets/insightsreport/insightsreport.png";
+import InsightsReportImage from "../../public/assets/insightsreport/insightsreport.webp";
 
 const InsightReports = [
   {

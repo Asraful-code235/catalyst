@@ -9,7 +9,7 @@ export default function LayoutProvider({
   return (
     <>
       <Header />
-      <main className="overflow-x-hidden">{children}</main>
+      <main className="overflow-x-hidden z-0 mt-12">{children}</main>
       <Footer />
     </>
   );

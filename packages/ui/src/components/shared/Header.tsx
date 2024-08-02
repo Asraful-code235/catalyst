@@ -96,8 +96,8 @@ export default function Header() {
   };
 
   return (
-    <>
-      <header className="border-b border-[#1A1A1A]">
+    <header className="bg-white fixed top-0 left-0 right-0 z-50">
+      <div className="border-b border-[#1A1A1A]">
         <div className="p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto  flex items-center justify-between gap-4 overflow-hidden relative">
           <div>
             <img
@@ -134,7 +134,7 @@ export default function Header() {
           </nav>
           <img src={menu.src} alt="menu" className="w-6 h-6 block lg:hidden" />
         </div>
-      </header>
+      </div>
       <AnimatePresence mode="wait">
         {expandedIndex !== null &&
           expandedIndex >= 0 &&
@@ -151,6 +151,6 @@ export default function Header() {
             </div>
           )}
       </AnimatePresence>
-    </>
+    </header>
   );
 }

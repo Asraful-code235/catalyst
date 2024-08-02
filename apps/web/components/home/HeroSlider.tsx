@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import HeroSlider1 from "../../public/assets/icons/Catalyst Spotlight.png";
-import HeroSlider2 from "../../public/assets/icons/generativeai.png";
-import HeroSlider3 from "../../public/assets/icons/State of Consumer 2026.png";
-import HeroSlider4 from "../../public/assets/icons/The CEO AGENDA.png";
+import HeroSlider1 from "../../public/assets/icons/Catalyst Spotlight.webp";
+import HeroSlider2 from "../../public/assets/icons/generativeai.webp";
+import HeroSlider3 from "../../public/assets/icons/State of Consumer 2026.webp";
+import HeroSlider4 from "../../public/assets/icons/The CEO AGENDA.webp";
 import RightArrow from "../../public/assets/icons/svg/right-arrow.svg";
 
 interface SliderItem {
@@ -80,7 +80,7 @@ const HeroSlider = () => {
             style={{
               filter: "drop-shadow(0px 0px 22.8px rgba(0, 0, 0, 0.30))",
             }}
-            className="object-cover aspect-auto absolute top-[32px] md:top-[70.4px] right-8 md:right-24 z-10 max-md:w-5 max-md:h-[27px]  h-[74.177px] "
+            className="object-cover aspect-auto absolute top-8 md:top-[70.4px] right-8 md:right-24 z-20 max-md:w-5 max-md:h-[27px] h-[74.177px] "
           />
           <Image
             src={sliderItems[activeIndex]?.img?.src || HeroSlider1.src}
