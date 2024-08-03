@@ -180,7 +180,7 @@ const HeroSlider = () => {
         <div className="max-w-[1440px] mx-auto px-8 transform flex items-center justify-center lg:justify-between w-full gap-2 lg:gap-8 text-white">
           {sliderItems.map((item, index) => (
             <button
-              key={item.key}
+              key={index}
               className={`${
                 index === activeIndex ? "underline underline-offset-4" : ""
               } text-shadow max-lg:text-xs max-lg:leading-[18px] font-medium hover:underline hover:underline-offset-2 leading-[150%] flex flex-col gap-4 items-center justify-center`}

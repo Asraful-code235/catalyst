@@ -3,10 +3,35 @@ import { NavItem } from "../types/index.js";
 export const navItems: NavItem[] = [
   {
     title: "What We Do",
+    slug: "what-we-do",
+    children: true,
+  },
+  {
+    title: "Case Studies",
+    slug: "case-studies",
+  },
+  {
+    title: "Insights",
+    slug: "insights",
+    children: true,
+  },
+  {
+    title: "About",
+    slug: "about",
+    children: true,
+  },
+  {
+    title: "Contact Us",
+    slug: "contact-us",
+  },
+];
+
+export const mobileNav: NavItem[] = [
+  {
+    title: "What We Do",
     children: [
       {
         title: "Industries",
-        rows: 2,
         children: [
           {
             title: "Consumer Goods & Services",
@@ -24,7 +49,6 @@ export const navItems: NavItem[] = [
         children: [
           {
             title: "Technology",
-            rows: 5,
             children: [
               {
                 title: "Application Design & Development",
@@ -44,7 +68,6 @@ export const navItems: NavItem[] = [
           },
           {
             title: "Business Strategy",
-            rows: 5,
             children: [
               {
                 title: "Business Transformation",
@@ -73,7 +96,6 @@ export const navItems: NavItem[] = [
           },
           {
             title: "Operations Management",
-            rows: 2,
             children: [
               {
                 title: "IT Services for Startups",
@@ -98,7 +120,6 @@ export const navItems: NavItem[] = [
     children: [
       {
         title: "Insights",
-        rows: 5,
         children: [
           { title: "Insight Topic 1", slug: "insight-topic-1" },
           { title: "Insight Topic 2", slug: "insight-topic-2" },
@@ -109,7 +130,7 @@ export const navItems: NavItem[] = [
       },
       {
         title: "Featured Topics",
-        rows: 10,
+
         children: [
           { title: "Insight Topic 1", slug: "insight-topic-1" },
           { title: "Insight Topic 2", slug: "insight-topic-2" },
@@ -127,7 +148,6 @@ export const navItems: NavItem[] = [
   },
   {
     title: "About",
-    NavTitle: "About Us",
     children: [
       { title: "Who We Are", slug: "who-we-are" },
       { title: "Partners", slug: "partners" },

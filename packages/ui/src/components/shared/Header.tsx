@@ -8,8 +8,15 @@ import { cn } from "@repo/ui/lib/utils";
 
 import menu from "../../assets/icons/svg/menu.svg";
 
+import IndustriesNav from "./header-items/IndustriesNav";
+import CapabilitiesNav from "./header-items/CapabilitiesNav";
+import InsightsNav from "./header-items/InsightsNav";
+import AboutNav from "./header-items/AboutNav";
+import MobileNav from "./header-items/MobileNav";
+
 export default function Header() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
 
   const handleMouseEnter = (index: number) => {
     setExpandedIndex(index);
@@ -19,86 +26,31 @@ export default function Header() {
     setExpandedIndex(null);
   };
 
-  const renderDropdown = (
-    children: { title: string; children?: { title: string }[] }[] | undefined,
-    navTitle?: string
-  ) => {
-    return (
-      <motion.div className="absolute left-0 w-full z-50 h-auto border-b border-[#1A1A1A] bg-white py-6 ">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="w-[668px] ml-auto grid grid-cols-3">
-            {navTitle && (
-              <div className="col-span-1">
-                <div className="paragraph font-bold text-sm text-start pl-8">
-                  {navTitle}
-                </div>
-              </div>
-            )}
-            <div className=" w-full">
-              {navTitle ? (
-                <div className="flex flex-col gap-4">
-                  {children?.map((child, childIndex) => (
-                    <div key={childIndex} className="flex flex-col gap-4">
-                      {child.title && (
-                        <div className="paragraph text-start">
-                          {child.title}
-                        </div>
-                      )}
+  const handleMenuClick = () => {
+    setIsMobileNavVisible((prev) => !prev);
+  };
 
-                      {child.children && (
-                        <div className="flex flex-wrap-reverse paragraph">
-                          {child.children.map((subChild, subChildIndex) => (
-                            <div key={subChildIndex} className="p-2 w-1/2">
-                              {subChild.title}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="flex flex-col gap-[42px] w-[668px] ml-auto ">
-                  {children?.map((child, childIndex) => {
-                    return (
-                      <div key={child.title} className={`flex gap-[128px]`}>
-                        <span className="paragraph font-bold text-sm pl-8">
-                          {child.title}
-                        </span>
-
-                        {child.children && (
-                          <div className="paragraph w-full flex flex-wrap gap-x-[32px] text-start whitespace-nowrap  gap-y-4">
-                            {child.children.map((subChild, subChildIndex) => {
-                              return (
-                                <div
-                                  style={{
-                                    paddingLeft: childIndex === 4 ? "2rem" : "",
-                                  }}
-                                  key={subChildIndex}
-                                  className="text-xs w-fit"
-                                >
-                                  {subChild.title}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    );
+  const renderDropdown = (parentSlug: string) => {
+    switch (parentSlug) {
+      case "what-we-do":
+        return <IndustriesNav />;
+      case "capabilities":
+        return <CapabilitiesNav />;
+      case "insights":
+        return <InsightsNav />;
+      case "about":
+        return <AboutNav />;
+      default:
+        return null;
+    }
   };
 
   return (
     <header className="bg-white fixed top-0 left-0 right-0 z-50">
-      <div className="border-b border-[#1A1A1A]">
-        <div className="p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto  flex items-center justify-between gap-4 overflow-hidden relative">
+      <div
+        className={`${isMobileNavVisible ? " " : "border-b border-[#1A1A1A]"}`}
+      >
+        <div className="max-lg:p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto flex items-center justify-between gap-4 overflow-hidden relative">
           <div>
             <img
               src={logo.src}
@@ -113,9 +65,9 @@ export default function Header() {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
                 className={cn(
-                  "px-8 py-[17px] flex items-center gap-1.5 relative",
+                  "px-9 py-[17px] text-xs flex items-center gap-1.5 font-normal relative cursor-pointer",
                   navItems.length - 1 === index &&
-                    "border-l border-black bg-primary font-medium"
+                    "border-l border-black bg-primary font-medium leading-normal"
                 )}
               >
                 {item.title}
@@ -132,9 +84,15 @@ export default function Header() {
               </div>
             ))}
           </nav>
-          <img src={menu.src} alt="menu" className="w-6 h-6 block lg:hidden" />
+          <img
+            src={menu.src}
+            alt="menu"
+            className="w-6 h-6 block lg:hidden cursor-pointer"
+            onClick={handleMenuClick}
+          />
         </div>
       </div>
+
       <AnimatePresence mode="wait">
         {expandedIndex !== null &&
           expandedIndex >= 0 &&
@@ -144,13 +102,11 @@ export default function Header() {
               onMouseEnter={() => handleMouseEnter(expandedIndex)}
               onMouseLeave={handleMouseLeave}
             >
-              {renderDropdown(
-                navItems[expandedIndex].children,
-                navItems[expandedIndex].NavTitle
-              )}
+              {renderDropdown(navItems[expandedIndex].slug!)}
             </div>
           )}
       </AnimatePresence>
+      {isMobileNavVisible && <MobileNav onClick={handleMenuClick} />}
     </header>
   );
 }

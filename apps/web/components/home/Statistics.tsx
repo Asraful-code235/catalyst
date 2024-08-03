@@ -60,13 +60,13 @@ export default function Statistics() {
         height="2"
         viewBox="0 0 366 2"
         fill="none"
-        className="-mt-10 mx-auto w-full"
+        className="-mt-10 mx-auto w-full lg:hidden"
       >
         <path
           d="M0 1L366 1.00003"
           stroke="#1A1A1A"
           stroke-opacity="0.25"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
       </svg>
     </section>
