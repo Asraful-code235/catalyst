@@ -6,5 +6,15 @@ import linkedIn from "./svg/linkedin.svg";
 import x from "./svg/x.svg";
 import line from "./svg/line.svg";
 import menu from "./svg/menu.svg";
-
-export { logo, ChevronDown, FooterLogo, instagram, linkedIn, x, line, menu };
+import placeholder from "./svg/placeholder.svg";
+export {
+  logo,
+  ChevronDown,
+  FooterLogo,
+  instagram,
+  linkedIn,
+  x,
+  line,
+  menu,
+  placeholder,
+};

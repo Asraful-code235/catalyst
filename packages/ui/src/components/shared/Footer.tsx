@@ -150,7 +150,7 @@ export default function Footer() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="346"
-          height="2"
+          height="1"
           viewBox="0 0 346 2"
           fill="none"
           className="w-full h-auto block md:hidden"
