@@ -77,7 +77,7 @@ export default function InsightsReport() {
               <h4 className="text-base leading-[17.6px] lg:text-2xl font-medium lg:leading-[26.4px]">
                 {insight.title}
               </h4>
-              <p className=" max-w-[584px] max-lg:text-xs max-lg:leading-[18px]">
+              <p className=" max-w-[584px] text-sm max-lg:text-xs max-lg:leading-[18px]">
                 {insight.description}
               </p>
               <button className="font-medium group text-xs lg:text-base leading-[17px] flex items-center gap-4 mt-[9px] ">

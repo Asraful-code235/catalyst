@@ -48,7 +48,7 @@ export default function InsightsNav() {
                         key={childIndex}
                         className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
                       >
-                        {child.title}
+                        <a href={child.slug}> {child.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -58,7 +58,7 @@ export default function InsightsNav() {
                         key={childIndex}
                         className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
                       >
-                        {child.title}
+                        <a href={child.slug}> {child.title}</a>
                       </li>
                     ))}
                   </ul>

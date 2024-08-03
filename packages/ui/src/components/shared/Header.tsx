@@ -51,13 +51,13 @@ export default function Header() {
         className={`${isMobileNavVisible ? " " : "border-b border-[#1A1A1A]"}`}
       >
         <div className="max-lg:p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto flex items-center justify-between gap-4 overflow-hidden relative">
-          <div>
+          <a href="/">
             <img
               src={logo.src}
               alt="logo"
               className="w-[68px] h-[14px] lg:h-[20.115px] lg:w-[90.82px]"
             />
-          </div>
+          </a>
           <nav className="paragraph hidden lg:flex justify-items-center">
             {navItems.map((item, index) => (
               <div

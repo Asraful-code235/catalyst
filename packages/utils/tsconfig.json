@@ -5,6 +5,7 @@
     "noEmit": false,
     "allowImportingTsExtensions": false
   },
-  "include": ["./**/*", "./**/*.json", "./**/*.ts"],
+  "include": ["./**/*", "./**/*.json", "./**/*.ts", "globals.d.ts"],
+
   "exclude": ["./dist/**/*"]
 }

@@ -4,11 +4,16 @@ declare module "*.svg" {
 }
 
 declare module "*.png" {
-  const content: string;
+  const content: any;
   export default content;
 }
 
 declare module "*.gif" {
-  const content: string;
+  const content: any;
+  export default content;
+}
+
+declare module "*.webp" {
+  const content: any;
   export default content;
 }

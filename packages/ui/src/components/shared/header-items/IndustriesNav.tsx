@@ -89,11 +89,12 @@ export default function IndustriesNav() {
             </div>
           </div>
           <div className="w-full col-span-2">
-            <ul className="grid grid-cols-3 gap-4 w-full">
+            <ul className="grid grid-cols-3 gap-4 w-full ">
               {industriesItems.map((item, index) => (
                 <a
                   key={index}
-                  className={`${[1, 4].includes(index) ? "pl-[42px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph `}
+                  href={`/industries/${item.slug}`}
+                  className={`${[1, 4].includes(index) ? "pl-[42px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph hover:font-bold `}
                 >
                   {item.title}
                 </a>
@@ -120,7 +121,7 @@ export default function IndustriesNav() {
                         key={childIndex}
                         className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
                       >
-                        {child.title}
+                        <a href={child.slug}>{child.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -130,7 +131,7 @@ export default function IndustriesNav() {
                         key={childIndex}
                         className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
                       >
-                        {child.title}
+                        <a href={child.slug}>{child.title}</a>
                       </li>
                     ))}
                   </ul>

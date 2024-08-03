@@ -9,3 +9,13 @@ export type MobileNavType = {
   slug?: string;
   children?: NavItem[];
 };
+
+export interface Module {
+  _type: string;
+  _key: string;
+  [key: string]: any;
+}
+
+export interface IndustryModules {
+  [key: string]: Module[];
+}
