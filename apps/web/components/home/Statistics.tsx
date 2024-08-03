@@ -65,7 +65,7 @@ export default function Statistics() {
         <path
           d="M0 1L366 1.00003"
           stroke="#1A1A1A"
-          stroke-opacity="0.25"
+          strokeOpacity="0.25"
           strokeWidth="0.5"
         />
       </svg>

@@ -97,7 +97,7 @@ export default function Footer() {
             <path
               d="M1 256L1.00001 0"
               stroke="white"
-              stroke-opacity="0.5"
+              strokeOpacity="0.5"
               strokeWidth="0.5"
             />
           </svg>
@@ -138,7 +138,7 @@ export default function Footer() {
         <path
           d="M0 1L346 0.999985"
           stroke="white"
-          stroke-opacity="0.5"
+          strokeOpacity="0.5"
           strokeWidth="0.5"
         />
       </svg>
@@ -158,7 +158,7 @@ export default function Footer() {
           <path
             d="M0 1L346 0.999985"
             stroke="white"
-            stroke-opacity="0.5"
+            strokeOpacity="0.5"
             strokeWidth="0.5"
           />
         </svg>

@@ -18,7 +18,7 @@ export default function CapabilitiesNav() {
             <ul className="flex flex-col gap-4">
               {aboutItems.map((item, index) => (
                 <a
-                  href={`/${item.slug}`}
+                  href={`${item.slug}`}
                   key={index}
                   className="paragraph text-start"
                 >
