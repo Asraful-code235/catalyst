@@ -94,7 +94,7 @@ export default function IndustriesNav() {
                 <a
                   key={index}
                   href={`/industries/${item.slug}`}
-                  className={`${[1, 4].includes(index) ? "pl-[42px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph hover:font-bold `}
+                  className={`${[1, 4].includes(index) ? "pl-[42px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph text-xs hover:font-bold `}
                 >
                   {item.title}
                 </a>
@@ -119,7 +119,7 @@ export default function IndustriesNav() {
                     {item.children.slice(0, 5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
                       >
                         <a href={child.slug}>{child.title}</a>
                       </li>
@@ -129,7 +129,7 @@ export default function IndustriesNav() {
                     {item.children.slice(5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
                       >
                         <a href={child.slug}>{child.title}</a>
                       </li>
