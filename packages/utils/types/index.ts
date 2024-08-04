@@ -19,3 +19,7 @@ export interface Module {
 export interface IndustryModules {
   [key: string]: Module[];
 }
+
+export interface CapabilitiesModules {
+  [key: string]: Module[];
+}
