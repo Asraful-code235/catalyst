@@ -24,6 +24,14 @@ import softwareAndtec from "./webp/software&tec.webp";
 import HowCatalystVentureStudioHelps from "./webp/How Catalyst Venture Studio Helps.webp";
 import CatalystCanHelp from "./webp/catalyst real estate image.webp";
 
+// partners
+
+import aws from "./webp/aws.webp";
+import mercury from "./webp/mercury.webp";
+import meta from "./webp/meta.webp";
+import microsoft from "./webp/microsoft.webp";
+import stripe from "./webp/stripe.webp";
+
 export {
   logo,
   ChevronDown,
@@ -36,6 +44,12 @@ export {
   separator,
   placeholder,
 
+  // partners
+  aws,
+  mercury,
+  meta,
+  microsoft,
+  stripe,
   // industries
   IndustriesConsumerPageTitle,
   DrivingDigitalExcellence,

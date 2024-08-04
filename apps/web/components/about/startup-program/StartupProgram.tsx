@@ -78,7 +78,7 @@ export default function StartupProgram() {
             opacity="0.4"
             d="M1346 1L0 1"
             stroke="#1A1A1A"
-            stroke-width="0.5"
+            strokeWidth="0.5"
           />
         </svg>
       </div>

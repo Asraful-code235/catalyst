@@ -121,7 +121,9 @@ export default function IndustriesNav() {
                         key={childIndex}
                         className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
                       >
-                        <a href={child.slug}>{child.title}</a>
+                        <a href={`/capabilities/${child.slug}`}>
+                          {child.title}
+                        </a>
                       </li>
                     ))}
                   </ul>

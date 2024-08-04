@@ -88,7 +88,7 @@ export default function PartnersPage() {
             d="M0 1L1252 0.999883"
             stroke="#1A1A1A"
             stroke-opacity="0.25"
-            stroke-width="0.5"
+            strokeWidth="0.5"
           />
         </svg>
         <div className="max-lg:w-screen  max-lg:-ml-8 flex items-center justify-center flex-wrap gap-4">
@@ -119,7 +119,7 @@ export default function PartnersPage() {
             d="M0 1L1252 0.999883"
             stroke="#1A1A1A"
             stroke-opacity="0.25"
-            stroke-width="0.5"
+            strokeWidth="0.5"
           />
         </svg>
       </div>
@@ -142,7 +142,7 @@ export default function PartnersPage() {
                 d="M0 1L1252 0.999883"
                 stroke="#1A1A1A"
                 stroke-opacity="0.25"
-                stroke-width="0.5"
+                strokeWidth="0.5"
               />
             </svg>
           </li>
