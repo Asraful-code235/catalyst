@@ -7,6 +7,7 @@ import AboutWithCards from "./capabalities/AboutWithCards";
 import TwoGridSection from "./capabalities/TwoGridSection";
 import AccordionList from "./capabalities/AccordionList";
 import HowWeWorkAndWhatWeGet from "./capabalities/HowWeWorkAndWhatWeGet";
+import ExploreCloudService from "./capabalities/ExploreCloudService";
 
 interface ModulesProps {
   modules: Module[];
@@ -24,6 +25,8 @@ export default function CapabilitiesModule({ modules }: ModulesProps) {
             return <AboutWithCards key={module._key} {...module} />;
           case "two-grid-section":
             return <TwoGridSection key={module._key} {...module} />;
+          case "explore-our-cloud-service":
+            return <ExploreCloudService key={module._key} {...module} />;
           case "list-item":
             return <ListItems key={module._key} {...module} />;
           case "accordion-list":

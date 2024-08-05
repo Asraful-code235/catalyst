@@ -59,30 +59,41 @@ export default function Header() {
             />
           </a>
           <nav className="paragraph hidden lg:flex justify-items-center">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-                className={cn(
-                  "px-9 py-[17px] text-xs flex items-center gap-1.5 font-normal relative cursor-pointer",
-                  navItems.length - 1 === index &&
-                    "border-l border-black bg-primary font-medium leading-normal"
-                )}
-              >
-                {item.title}
-                {item.children && (
-                  <motion.img
-                    src={ChevronDown.src}
-                    alt="chevron-down"
-                    className={cn(
-                      "w-4 h-4 transition-transform",
-                      expandedIndex === index && "rotate-180"
-                    )}
-                  />
-                )}
-              </div>
-            ))}
+            {navItems.map((item, index) => {
+              const isLastItem = navItems.length - 1 === index;
+              return isLastItem ? (
+                <a
+                  key={index}
+                  href={`/${item.slug}`}
+                  className={cn(
+                    "px-9 py-[17px] text-xs flex items-center gap-1.5 relative cursor-pointer border-l border-black bg-primary font-medium leading-normal"
+                  )}
+                >
+                  {item.title}
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  className={cn(
+                    "px-9 py-[17px] text-xs flex items-center gap-1.5 font-normal relative cursor-pointer"
+                  )}
+                >
+                  {item.title}
+                  {item.children && (
+                    <motion.img
+                      src={ChevronDown.src}
+                      alt="chevron-down"
+                      className={cn(
+                        "w-4 h-4 transition-transform",
+                        expandedIndex === index && "rotate-180"
+                      )}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </nav>
           <img
             src={menu.src}
