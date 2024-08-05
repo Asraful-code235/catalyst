@@ -41,6 +41,16 @@ import Lcbo from "./webp/lcbo.webp";
 import Miami from "./webp/miami.webp";
 import Toronto from "./webp/toronto.webp";
 import Tradible from "./webp/tradible.webp";
+import tradibleHeaderBigImage from "./webp/tradibleheaderbigImage.webp";
+import tradibleHeaderSmallImage from "./webp/tradibleheadersmallimage.webp";
+import tradibleServiceImage from "./webp/tradibleserviceimage.webp";
+import LamemoireBigHeaderImage from "./webp/lamemoireBigheaderImage.webp";
+import LamemoireBigSmallImage from "./webp/lamemoireheadersmallimage.webp";
+import EtrHeaderSmallImage from "./webp/407etrHeaderSmallImage.webp";
+import whypartnerwithusImage1 from "./webp/whypartnerwithusimage1.webp";
+import whypartnerwithusImage2 from "./webp/whypartnerwithusimage2.webp";
+import lamemoireBottomImage from "./webp/lamemoirebottomimage.webp";
+import ETRbottomimage from "./webp/407ETRbottomimage.webp";
 
 export {
   logo,
@@ -69,6 +79,17 @@ export {
   Miami,
   Toronto,
   Tradible,
+  tradibleHeaderBigImage,
+  tradibleHeaderSmallImage,
+  tradibleServiceImage,
+  LamemoireBigHeaderImage,
+  LamemoireBigSmallImage,
+  EtrHeaderSmallImage,
+  whypartnerwithusImage1,
+  whypartnerwithusImage2,
+  lamemoireBottomImage,
+  ETRbottomimage,
+
   // industries
   IndustriesConsumerPageTitle,
   DrivingDigitalExcellence,
