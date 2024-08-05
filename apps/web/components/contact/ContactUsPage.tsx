@@ -25,12 +25,6 @@ const socialLinks = [
   },
 ];
 
-interface SocialLink {
-  title: string;
-  icon: React.ComponentType<any>;
-  url: string;
-}
-
 export default function ContactUsPage() {
   const {
     register,
@@ -89,9 +83,9 @@ export default function ContactUsPage() {
           <h1 className="text-[40px] leading-[44px] font-medium">Contact Us</h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="grid lg:grid-cols-2 gap-8 lg:gap-6"
+            className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-6"
           >
-            <div className="description  flex flex-col gap-4">
+            <div className="description col-span-1 w-full flex flex-col gap-4">
               <label htmlFor="name">Name *</label>
               <input
                 type="text"

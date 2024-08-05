@@ -25,7 +25,7 @@ export default function AboutNav() {
                 <a
                   href={`/about-us/${item.slug}`}
                   key={index}
-                  className="paragraph text-xs text-start"
+                  className="paragraph text-xs text-start hover:font-bold"
                 >
                   {item.title}
                 </a>

@@ -119,7 +119,7 @@ export default function IndustriesNav() {
                     {item.children.slice(0, 5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap hover:font-bold`}
                       >
                         <a href={`/capabilities/${child.slug}`}>
                           {child.title}
@@ -131,7 +131,7 @@ export default function IndustriesNav() {
                     {item.children.slice(5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap hover:font-bold`}
                       >
                         <a href={child.slug}>{child.title}</a>
                       </li>

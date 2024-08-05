@@ -54,23 +54,23 @@ export const mobileNav: NavItem[] = [
             children: [
               {
                 title: "Application Design & Development",
-                slug: "/capabilities/technology/application-design-development",
+                slug: "/capabilities/application-design-development",
               },
               {
                 title: "Blockchain & Cryptocurrency",
-                slug: "/capabilities/technology/blockchain-cryptocurrency",
+                slug: "/capabilities/blockchain-cryptocurrency",
               },
               {
                 title: "Cloud Services",
-                slug: "/capabilities/technology/cloud-services",
+                slug: "/capabilities/cloud-services",
               },
               {
                 title: "Cyber Security",
-                slug: "/capabilities/technology/cyber-security",
+                slug: "/capabilities/cyber-security",
               },
               {
                 title: "Web Design & Development",
-                slug: "/capabilities/technology/web-design-development",
+                slug: "/capabilities/web-design-development",
               },
             ],
           },
@@ -79,35 +79,35 @@ export const mobileNav: NavItem[] = [
             children: [
               {
                 title: "Business Transformation",
-                slug: "/capabilities/business-strategy/business-transformation",
+                slug: "/capabilities/business-transformation",
               },
               {
                 title: "Brand Development & Positioning",
-                slug: "/capabilities/business-strategy/brand-development-positioning",
+                slug: "/capabilities/brand-development-positioning",
               },
               {
                 title: "Finance and Strategy",
-                slug: "/capabilities/business-strategy/finance-strategy",
+                slug: "/capabilities/finance-strategy",
               },
               {
                 title: "Go-To-Market Strategy",
-                slug: "/capabilities/business-strategy/go-to-market-strategy",
+                slug: "/capabilities/go-to-market-strategy",
               },
               {
                 title: "Innovation Strategy and Delivery",
-                slug: "/capabilities/business-strategy/innovation-strategy-delivery",
+                slug: "/capabilities/innovation-strategy-delivery",
               },
               {
                 title: "Pricing & Revenue Management",
-                slug: "/capabilities/business-strategy/pricing-revenue-management",
+                slug: "/capabilities/pricing-revenue-management",
               },
               {
                 title: "Product Validation/Market Research",
-                slug: "/capabilities/business-strategy/product-validation-market-research",
+                slug: "/capabilities/product-validation-market-research",
               },
               {
                 title: "Startup Advisory",
-                slug: "/capabilities/business-strategy/startup-advisory",
+                slug: "/capabilities/startup-advisory",
               },
             ],
           },
@@ -116,11 +116,11 @@ export const mobileNav: NavItem[] = [
             children: [
               {
                 title: "IT Services for Startups",
-                slug: "/capabilities/operations-management/it-services-startups",
+                slug: "/capabilities/it-services-startups",
               },
               {
                 title: "Strategic Management Services",
-                slug: "/capabilities/operations-management/strategic-management-services",
+                slug: "/capabilities/strategic-management-services",
               },
             ],
           },
@@ -195,9 +195,9 @@ export const mobileNav: NavItem[] = [
   {
     title: "About",
     children: [
-      { title: "Who We Are", slug: "/about/who-we-are" },
-      { title: "Partners", slug: "/about/partners" },
-      { title: "Startup Program", slug: "/about/startup-program" },
+      { title: "Who We Are", slug: "/about-us/who-we-are" },
+      { title: "Partners", slug: "/about-us/partners" },
+      { title: "Startup Program", slug: "/about-us/startup-program" },
     ],
   },
   {

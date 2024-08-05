@@ -46,9 +46,9 @@ export default function InsightsNav() {
                     {item.children.slice(0, 5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap hover:font-bold`}
                       >
-                        <a href={child.slug}> {child.title}</a>
+                        <a href={`/insights/${child.slug}`}> {child.title}</a>
                       </li>
                     ))}
                   </ul>
@@ -56,9 +56,9 @@ export default function InsightsNav() {
                     {item.children.slice(5).map((child, childIndex) => (
                       <li
                         key={childIndex}
-                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap`}
+                        className={`paragraph text-xs text-start flex-shrink-0 whitespace-nowrap hover:font-bold`}
                       >
-                        <a href={child.slug}> {child.title}</a>
+                        <a href={`/insights/${child.slug}`}> {child.title}</a>
                       </li>
                     ))}
                   </ul>

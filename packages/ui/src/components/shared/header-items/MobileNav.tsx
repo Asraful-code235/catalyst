@@ -42,7 +42,7 @@ const MobileNav = ({ onClick }: { onClick: () => void }) => {
             {!item.children && item.title === "Contact Us" ? (
               <div className="w-full flex flex-col mt-4">
                 <Button className="border-b border-[#1A1A1A]">
-                  {item.title}
+                  <a href="/contact-us"> {item.title}</a>
                 </Button>
               </div>
             ) : (
@@ -78,13 +78,19 @@ const NavItem = ({ item }: { item: MobileNavType }) => {
       {item.children?.length ? (
         <p className="paragraph text-left font-bold">{item.title}</p>
       ) : (
-        <p className="paragraph text-left">{item.title}</p>
+        <a href={item.slug} className="paragraph text-left ">
+          {item.title}
+        </a>
       )}
 
       {item.title === "Featured Topics" ? (
         <ul className="grid grid-cols-3 gap-4">
           {item.children?.slice(0, 5).map((sub, index) => (
-            <a href={`${sub.slug}`} key={index} className="paragraph text-left">
+            <a
+              href={`${sub.slug}`}
+              key={index}
+              className="paragraph text-left hover:font-bold "
+            >
               {sub.title}
             </a>
           ))}
@@ -92,9 +98,35 @@ const NavItem = ({ item }: { item: MobileNavType }) => {
       ) : (
         <ul className="flex flex-col gap-6">
           {item.children?.map((sub, index) => (
-            <a href={`${sub.slug}`} key={index} className="paragraph text-left">
-              {sub.title}
-            </a>
+            <div key={index}>
+              {sub.children ? (
+                <div className="flex flex-col gap-4">
+                  <div className="paragraph text-left font-bold">
+                    {sub.title}
+                  </div>
+                  <ul className="flex flex-col gap-6">
+                    {Array.isArray(sub.children) &&
+                      sub.children.map((i, key: number) => (
+                        <li key={key}>
+                          <a
+                            href={`${i.slug}`}
+                            className="paragraph text-left hover:font-bold"
+                          >
+                            {i.title}
+                          </a>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              ) : (
+                <a
+                  href={`${sub.slug}`}
+                  className="paragraph text-left hover:font-bold"
+                >
+                  {sub.title}
+                </a>
+              )}
+            </div>
           ))}
         </ul>
       )}
