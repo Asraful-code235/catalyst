@@ -80,7 +80,14 @@ export default function Header() {
                     "px-9 py-[17px] text-xs flex items-center gap-1.5 font-normal relative cursor-pointer"
                   )}
                 >
-                  {item.title}
+                  <span>
+                    {item?.children ? (
+                      <span>{item.title}</span>
+                    ) : (
+                      <a href={`/${item.slug}`}>{item.title}</a>
+                    )}
+                  </span>
+
                   {item.children && (
                     <motion.img
                       src={ChevronDown.src}

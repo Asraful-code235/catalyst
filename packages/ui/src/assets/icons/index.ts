@@ -32,6 +32,16 @@ import meta from "./webp/meta.webp";
 import microsoft from "./webp/microsoft.webp";
 import stripe from "./webp/stripe.webp";
 
+// case study
+
+import Etr from "./webp/407.webp";
+import CityOfBoston from "./webp/cityofboston.webp";
+import Lamemoire from "./webp/lamemoire.webp";
+import Lcbo from "./webp/lcbo.webp";
+import Miami from "./webp/miami.webp";
+import Toronto from "./webp/toronto.webp";
+import Tradible from "./webp/tradible.webp";
+
 export {
   logo,
   ChevronDown,
@@ -50,6 +60,15 @@ export {
   meta,
   microsoft,
   stripe,
+
+  // case study
+  Etr,
+  CityOfBoston,
+  Lamemoire,
+  Lcbo,
+  Miami,
+  Toronto,
+  Tradible,
   // industries
   IndustriesConsumerPageTitle,
   DrivingDigitalExcellence,

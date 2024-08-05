@@ -39,8 +39,8 @@ export default function CaseStudy() {
   const [hoveredItem, setHoveredItem] = useState<number>(0);
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3">
-      <div className="md:col-span-2 relative lg:h-[375px] md:h-auto">
+    <section className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="md:col-span-2 relative lg:min-h-[375px] max-lg:h-auto">
         <Image
           src={caseStudyData[hoveredItem]?.img || Tradible}
           alt={caseStudyData[hoveredItem]?.title || "tradible"}
@@ -49,8 +49,9 @@ export default function CaseStudy() {
           blurDataURL={placeholder.src}
           loading="lazy"
           decoding="async"
+          quality={"85"}
           height={375}
-          className="w-full object-cover object-center max-lg:h-[106px] h-[375px]"
+          className="w-full object-cover object-center h-full max-lg:h-[106px]"
         />
         <div className="absolute inset-0 px-8 py-4 lg:hidden h-full flex flex-col justify-between">
           <h3 className="paragraph text-left text-white leading-[17.5px] font-medium">
@@ -82,7 +83,7 @@ export default function CaseStudy() {
             key={item.id}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(0)}
-            className={`p-6 max-lg:py-6 max-lg:px-8 border border-l-0 group flex flex-col gap-[14px] lg:gap-[18px] cursor-pointer transition-colors h-full ${
+            className={`p-6 max-lg:py-6 max-lg:px-8 border border-l-0 group flex flex-col gap-[14px] lg:gap-[24px] cursor-pointer transition-colors h-full ${
               hoveredItem === index ? "bg-primary" : "bg-white"
             }`}
           >
