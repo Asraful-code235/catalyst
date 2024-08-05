@@ -23,3 +23,6 @@ export interface IndustryModules {
 export interface CapabilitiesModules {
   [key: string]: Module[];
 }
+export interface CaseStudyModules {
+  [key: string]: Module[];
+}

@@ -147,7 +147,7 @@ export default function CaseStudiesPage() {
               height={400}
               placeholder="blur"
               blurDataURL={placeholder.src}
-              className="w-full h-full aspect-auto z-10 "
+              className="w-full h-full aspect-auto  "
               objectPosition="center"
               loading="lazy"
               decoding="async"
