@@ -111,6 +111,7 @@ export const capabilitiesModuleData: CapabilitiesModules = {
       data: {
         rtl: true,
         showTitle: true,
+        isSingle: true,
         title: "Web Portals",
         description:
           "We build fully-fledged web portals tailored to your target audience and intended functionality, embedded in your current ecosystem and connected with third-party solutions.",
@@ -528,6 +529,7 @@ export const capabilitiesModuleData: CapabilitiesModules = {
       data: {
         rtl: true,
         showTitle: true,
+        isSingle: true,
         ourMoto:
           "We are dedicated to helping organizations discover and activate their potential with cloud, enabling enterprise transformation through innovative applications of cloud technology. With our full spectrum of capabilities, we support your business at every step of the cloud journey, delivering better outcomes and new value for our clients.",
         title: "Why Choose Us for Cloud Services?",
@@ -564,6 +566,130 @@ export const capabilitiesModuleData: CapabilitiesModules = {
     {
       _type: "contactTeam",
       _key: "7",
+      data: {
+        title: "Connect with our blockchain Team",
+        scheduleLink: externalLinks,
+        contactUs: "",
+      },
+    },
+  ],
+  "cyber-security": [
+    {
+      _type: "pageTitleSection",
+      _key: "1",
+      data: {
+        title: "Cyber Security",
+        description: "Capabilities - technology ",
+      },
+    },
+    {
+      _type: "about",
+      _key: "2",
+      data: {
+        sections: [
+          {
+            title: "Cybersecurity Services",
+            description:
+              "Catalyst provides cybersecurity consulting services to help organizations manage and protect against cyberattacks. A well-protected business has the potential to be confident and the most innovative. The smartest businesses don’t just manage cyber risk; they use it as a source of growth and market edge. While technology makes many things possible, possible doesn’t always mean safe. As cyber threats grow in volume and sophistication and technology becomes essential for meeting the needs of your customers, employees, suppliers, and society, your cybersecurity must build resilience and trust.",
+          },
+          {
+            title: "Catalyst Cybersecurity Services",
+            description:
+              "Catalyst helps you create a resilient and trusted digital world, even in the face of evolving threats. Our approach combines technological expertise, deep business knowledge, and creative professionals passionate about protecting and building your business. Together, let’s create a trusted digital world so you can push the limits of what’s possible.",
+          },
+        ],
+      },
+    },
+    {
+      _type: "list-item",
+      _key: "3",
+      data: {
+        rtl: true,
+        title: "Our Services",
+        showTitle: true,
+        description: "",
+        extraClass: true,
+        services: [
+          {
+            title: "Strategy and Governance",
+            description:
+              "Turn risk into a competitive advantage by aligning your cybersecurity strategy with your business goals. We help develop policies and frameworks that integrate security into your organizational culture and governance structures.",
+          },
+          {
+            title: "Security Transformation",
+            description:
+              "Accelerate your cybersecurity initiatives in an agile world. We assist in designing and implementing security transformations that support your business’s rapid evolution and technological advancements.",
+          },
+          {
+            title: "Cyber Defense",
+            description:
+              "Confidently seize opportunities while protecting your digital assets. We build robust defense mechanisms that detect, prevent, and respond to cyber threats, ensuring your business operations are secure and resilient.",
+          },
+          {
+            title: "Custom Delivery",
+            description:
+              "We offer customized delivery and terms through our Public Cloud Provider practices, helping you plan, implement, and scale your cloud transformations cost-effectively.",
+          },
+          {
+            title: "Cyber Response",
+            description:
+              "Operate with confidence in a digital world by preparing for and responding to cyber incidents. Our response strategies and protocols help minimize damage, recover swiftly, and maintain business continuity.",
+          },
+          {
+            title: "Privacy, Regulatory, and Information Management (PRIM)",
+            description:
+              "Providing end-to-end privacy solutions and advisory services to help you navigate complex regulatory environments and manage sensitive information responsibly.",
+          },
+        ],
+      },
+    },
+    {
+      _type: "list-item",
+      _key: "4",
+      data: {
+        rtl: true,
+        title: "Innovative Approach",
+        showTitle: true,
+        description:
+          "As a leading provider and implementer of cybersecurity solutions, Catalyst applies industry-leading security practices and develops new ones fit for your specific purposes. Our innovative approach includes various delivery methods, ensuring you work with extraordinary professionals who understand your business and technology needs.",
+        extraClass: true,
+        services: [
+          {
+            title: "Strategy and Governance",
+            description:
+              "Turn risk into a competitive advantage by aligning your cybersecurity strategy with your business goals. We help develop policies and frameworks that integrate security into your organizational culture and governance structures.",
+          },
+          {
+            title: "Security Transformation",
+            description:
+              "Accelerate your cybersecurity initiatives in an agile world. We assist in designing and implementing security transformations that support your business’s rapid evolution and technological advancements.",
+          },
+          {
+            title: "Cyber Defense",
+            description:
+              "Confidently seize opportunities while protecting your digital assets. We build robust defense mechanisms that detect, prevent, and respond to cyber threats, ensuring your business operations are secure and resilient.",
+          },
+          {
+            title: "Custom Delivery",
+            description:
+              "We offer customized delivery and terms through our Public Cloud Provider practices, helping you plan, implement, and scale your cloud transformations cost-effectively.",
+          },
+          {
+            title: "Cyber Response",
+            description:
+              "Operate with confidence in a digital world by preparing for and responding to cyber incidents. Our response strategies and protocols help minimize damage, recover swiftly, and maintain business continuity.",
+          },
+          {
+            title: "Privacy, Regulatory, and Information Management (PRIM)",
+            description:
+              "Providing end-to-end privacy solutions and advisory services to help you navigate complex regulatory environments and manage sensitive information responsibly.",
+          },
+        ],
+      },
+    },
+    {
+      _type: "contactTeam",
+      _key: "5",
       data: {
         title: "Connect with our blockchain Team",
         scheduleLink: externalLinks,

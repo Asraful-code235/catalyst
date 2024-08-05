@@ -4,7 +4,7 @@ export default function ListItems({ data }: Module) {
   if (!data) return null;
   return (
     <section
-      className={`max-w-[1440px] mx-auto px-8 lg:px-[94px] ${!data?.showTitle ? "pt-8 lg:pt-[64px] gap-6" : "gap-8"} pb-8 lg:pb-[64px] flex flex-col lg:gap-[64px]`}
+      className={`max-w-[1440px] mx-auto px-8 lg:px-[94px] ${!data?.showTitle || data?.extraClass ? "pt-8 lg:pt-[64px] gap-6" : "gap-8"} pb-8 lg:pb-[64px] flex flex-col lg:gap-[64px]`}
     >
       {data?.showTitle && (
         <div
@@ -19,7 +19,7 @@ export default function ListItems({ data }: Module) {
           )}
           {data?.description && (
             <h2
-              className={`description lg:max-w-[710px] w-full ${data?.tranketedDescription == true ? "lg:!max-w-[437px] lg:!ml-auto !font-medium text-right" : " "}`}
+              className={`description lg:max-w-[710px] w-full ${data?.tranketedDescription == true ? "lg:!max-w-[437px] lg:!ml-auto !font-medium lg:text-right" : " "}`}
             >
               {data?.description}
             </h2>
@@ -31,13 +31,35 @@ export default function ListItems({ data }: Module) {
         className={`grid grid-cols-1 ${data?.rtl ? "gap-8" : "lg:grid-cols-2 lg:gap-x-[84px] gap-8 lg:gap-y-[58px]"} `}
       >
         {data?.services?.map((item: Module, key: number) => (
-          <li
-            key={key}
-            className={`flex flex-col gap-4 ${data?.rtl ? "" : "lg:gap-6"}`}
-          >
-            <p className="header">{item.title}</p>
-            <p className="description tracking-tight">{item.description}</p>
-          </li>
+          <div key={key} className="flex flex-col gap-4">
+            <li
+              className={`flex flex-col gap-4 ${data?.rtl && !data?.isSingle ? "lg:flex-row w-full lg:justify-between" : "lg:gap-6"}`}
+            >
+              <p className="header flex-shrink-0">{item.title}</p>
+              <p
+                className={`${data?.rtl && !data?.isSingle ? "lg:text-right" : ""} description tracking-tight`}
+              >
+                {item.description}
+              </p>
+            </li>
+            {data?.rtl === true && !data?.isSingle === true && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1252"
+                height="2"
+                viewBox="0 0 1252 2"
+                fill="none"
+                className="w-full mx-auto "
+              >
+                <path
+                  opacity="0.4"
+                  d="M1252 1L0 1"
+                  stroke="#1A1A1A"
+                  stroke-width="0.5"
+                />
+              </svg>
+            )}
+          </div>
         ))}
       </ul>
 
@@ -45,23 +67,7 @@ export default function ListItems({ data }: Module) {
         <p className="header tracking-tight max-lg:mb-8 lg:mt-[30px]">
           {data?.ourMoto}
         </p>
-      ) : (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1252"
-          height="2"
-          viewBox="0 0 1252 2"
-          fill="none"
-          className="mx-auto w-full"
-        >
-          <path
-            opacity="0.4"
-            d="M1252 1L0 1"
-            stroke="#1A1A1A"
-            strokeWidth="0.5"
-          />
-        </svg>
-      )}
+      ) : null}
     </section>
   );
 }
