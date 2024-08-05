@@ -9,6 +9,7 @@
     "catalyst:dev": "pnpm --filter ./apps/catalyst-ui dev",
     "docs:dev": "pnpm --filter ./apps/docs dev",
     "web:build": "pnpm --filter ./apps/web lint && pnpm --filter ./apps/web build",
+    "catalyst:build": "pnpm --filter ./apps/catalyst-ui lint && pnpm --filter ./apps/catalyst-ui build",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "ui:add": "pnpm --filter @repo/ui ui:add"

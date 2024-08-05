@@ -26,16 +26,43 @@ importers:
 
   apps/catalyst-ui:
     dependencies:
+      '@plaiceholder/next':
+        specifier: ^3.0.0
+        version: 3.0.0(next@14.2.4)(plaiceholder@3.0.0)(sharp@0.33.4)
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      framer-motion:
+        specifier: ^10.16.4
+        version: 10.18.0(react-dom@18.3.1)(react@18.3.1)
       next:
         specifier: 14.2.4
         version: 14.2.4(react-dom@18.3.1)(react@18.3.1)
+      plaiceholder:
+        specifier: ^3.0.0
+        version: 3.0.0(sharp@0.33.4)
       react:
         specifier: ^18
         version: 18.3.1
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
+      react-dropzone:
+        specifier: ^14.2.3
+        version: 14.2.3(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.51.5
+        version: 7.52.1(react@18.3.1)
+      utils:
+        specifier: workspace:*
+        version: link:../../packages/utils
     devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^20
         version: 20.14.13
@@ -1112,6 +1139,18 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
+
+  /@plaiceholder/next@3.0.0(next@14.2.4)(plaiceholder@3.0.0)(sharp@0.33.4):
+    resolution: {integrity: sha512-7UK/H1X64hwo2VaxOPKMXE+OY9IgmKLPsq/xKHZ+gU07oqQSfIWWIgpVVucMB3ZgVYah+68agR15BRuSxAuMHw==}
+    peerDependencies:
+      next: '>= 10.0.0'
+      plaiceholder: '>=3.0.0'
+      sharp: '>= 0.30.6'
+    dependencies:
+      next: 14.2.4(react-dom@18.3.1)(react@18.3.1)
+      plaiceholder: 3.0.0(sharp@0.33.4)
+      sharp: 0.33.4
+    dev: false
 
   /@plaiceholder/next@3.0.0(next@15.0.0-rc.0)(plaiceholder@3.0.0)(sharp@0.33.4):
     resolution: {integrity: sha512-7UK/H1X64hwo2VaxOPKMXE+OY9IgmKLPsq/xKHZ+gU07oqQSfIWWIgpVVucMB3ZgVYah+68agR15BRuSxAuMHw==}
@@ -5655,6 +5694,18 @@ packages:
     dependencies:
       react: 19.0.0-rc-f994737d14-20240522
       scheduler: 0.25.0-rc-f994737d14-20240522
+    dev: false
+
+  /react-dropzone@14.2.3(react@18.3.1):
+    resolution: {integrity: sha512-O3om8I+PkFKbxCukfIR3QAGftYXDZfOE2N1mr/7qebQJHs7U+/RSL/9xomJNpRg9kM5h9soQSdf0Gc7OHF5Fug==}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      react: '>= 16.8 || 18.0.0'
+    dependencies:
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+      prop-types: 15.8.1
+      react: 18.3.1
     dev: false
 
   /react-dropzone@14.2.3(react@19.0.0-rc-f994737d14-20240522):
