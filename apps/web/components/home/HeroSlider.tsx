@@ -92,10 +92,10 @@ const HeroSlider = () => {
           />
         </motion.div>
         <motion.div
-          key={sliderItems[activeIndex]!.key + timestamp}
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "-100%", opacity: 0 }}
+          key={sliderItems[activeIndex]!.key}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="absolute w-full h-full"
           onAnimationComplete={() => setShowText(true)}
@@ -125,17 +125,7 @@ const HeroSlider = () => {
           }}
           className="object-cover aspect-auto absolute top-8 md:top-[70.4px] right-8 lg:right-[94px] z-20 max-md:w-5 max-md:h-[27px] h-[74.177px]"
         />
-        <motion.div
-          animate={{
-            display: showText ? "" : "none",
-          }}
-          transition={{
-            duration: 0.5,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute px-8 py-8 md:top-[70.4px] md:left-0 font-medium flex flex-col justify-center max-lg:px-6 gap-6 md:gap-8"
-        >
+        <motion.div className="absolute px-8 py-8 md:top-[70.4px] md:left-0 font-medium flex flex-col justify-center max-lg:px-6 gap-6 md:gap-8">
           <p className="text-white text-xs md:text-2xl leading-[13.2px] md:leading-6">
             {sliderItems[activeIndex]?.category}
           </p>
