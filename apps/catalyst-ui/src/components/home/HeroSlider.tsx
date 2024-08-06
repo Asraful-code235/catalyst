@@ -72,7 +72,7 @@ const HeroSlider = () => {
     <section className='relative w-full h-[334px] md:h-[602px] overflow-hidden'>
       <AnimatePresence mode='wait'>
         <motion.div
-          key={sliderItems[previousIndex]!.key + timestamp}
+          key={sliderItems[previousIndex]!.key}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 1 }}
@@ -114,7 +114,7 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className='max-w-[1440px] mx-auto relative'>
+      <div className='max-w-[1440px] mx-auto lg:px-[94px] relative'>
         <Image
           src={RightArrow}
           alt={'right arrow'}
@@ -125,35 +125,37 @@ const HeroSlider = () => {
           }}
           className='object-cover aspect-auto absolute top-8 md:top-[70.4px] right-8 lg:right-[94px] z-20 max-md:w-5 max-md:h-[27px] h-[74.177px]'
         />
-        <motion.div className='absolute px-8 py-8 md:top-[70.4px] md:left-0 font-medium flex flex-col justify-center max-lg:px-6 gap-6 md:gap-8'>
-          <p className='text-white text-xs md:text-2xl leading-[13.2px] md:leading-6'>
-            {sliderItems[activeIndex]?.category}
-          </p>
-          <h1
-            style={{
-              textShadow: '0px 0px 4px rgba(0, 0, 0, 0.50)',
-            }}
-            className='text-white text-[32px] leading-[35.2px] md:text-[64px] md:leading-[70.4px] max-w-[214px] md:max-w-[420px]'
-          >
-            {sliderItems[activeIndex]?.title}
-          </h1>
-          <button className='text-white mt-4 max-md:text-xs flex items-center font-medium leading-[18px] md:leading-6'>
-            Read More
-            <span className='ml-3 md:ml-2'>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='10'
-                height='16'
-                viewBox='0 0 10 16'
-                fill='none'
-              >
-                <path
-                  d='M0.500002 2.2625L6.06275 8L0.500001 13.7375L2.21255 15.5L9.5 8L2.21255 0.5L0.500002 2.2625Z'
-                  fill='white'
-                />
-              </svg>
-            </span>
-          </button>
+        <motion.div className='absolute inset-0 '>
+          <div className=' px-8 lg:px-[94px] py-8 lg:py-[94px] font-medium flex flex-col justify-center max-lg:px-6 gap-6 md:gap-8'>
+            <p className='text-white text-xs md:text-2xl leading-[13.2px] md:leading-6'>
+              {sliderItems[activeIndex]?.category}
+            </p>
+            <h1
+              style={{
+                textShadow: '0px 0px 4px rgba(0, 0, 0, 0.50)',
+              }}
+              className='text-white text-[32px] leading-[35.2px] md:text-[64px] md:leading-[70.4px] max-w-[214px] md:max-w-[420px]'
+            >
+              {sliderItems[activeIndex]?.title}
+            </h1>
+            <button className='text-white mt-4 max-md:text-xs flex items-center font-medium leading-[18px] md:leading-6'>
+              Read More
+              <span className='ml-3 md:ml-2'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='10'
+                  height='16'
+                  viewBox='0 0 10 16'
+                  fill='none'
+                >
+                  <path
+                    d='M0.500002 2.2625L6.06275 8L0.500001 13.7375L2.21255 15.5L9.5 8L2.21255 0.5L0.500002 2.2625Z'
+                    fill='white'
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
         </motion.div>
       </div>
 
@@ -162,32 +164,38 @@ const HeroSlider = () => {
           background:
             'linear-gradient(180deg, rgba(34, 34, 34, 0.00) 0%, #1A1A1A 100%)',
         }}
-        className=' absolute bottom-0 pb-8 md:h-[103px] w-full px-24 flex flex-col gap-4'
+        className=' absolute bottom-0 md:h-[103px] w-full flex flex-col gap-4 '
       >
-        <div className='lg:hidden text-center mt-4 text-white'>
-          <p className='text-sm font-medium'>{sliderItems[activeIndex]?.key}</p>
-        </div>
-        <div className='max-w-[1440px] mx-auto px-8 transform flex items-center justify-center lg:justify-between w-full gap-2 lg:gap-8 text-white'>
-          {sliderItems.map((item, index) => (
-            <button
-              key={index}
-              className={`${
-                index === activeIndex ? 'underline underline-offset-4' : ''
-              } text-shadow max-lg:text-xs max-lg:leading-[18px] font-medium hover:underline hover:underline-offset-2 leading-[150%] flex flex-col gap-4 items-center justify-center`}
-              onMouseEnter={() => handleCategoryClick(index)}
-            >
-              <motion.span className={`hidden lg:block `}>
-                {item.key}
-              </motion.span>
-              <motion.span
-                animate={{
-                  backgroundColor:
-                    index === activeIndex ? '#ffff' : 'rgba(255,255,255,0.50)',
-                }}
-                className='w-1.5 h-1.5 rounded-full block lg:hidden'
-              ></motion.span>
-            </button>
-          ))}
+        <div className='flex flex-col gap-4 px-8 lg:px-[94px] py-8 lg:pt-[48px] lg:pb-8 max-w-[1440px] mx-auto w-full'>
+          <div className='lg:hidden text-center mt-4 text-white'>
+            <p className='text-sm font-medium'>
+              {sliderItems[activeIndex]?.key}
+            </p>
+          </div>
+          <div className='max-w-[1440px] mx-auto max-lg:px-8 transform flex items-center justify-center lg:justify-between w-full gap-2 lg:gap-8 text-white'>
+            {sliderItems.map((item, index) => (
+              <button
+                key={index}
+                className={`${
+                  index === activeIndex ? 'underline underline-offset-4' : ''
+                } text-shadow max-lg:text-xs max-lg:leading-[18px] font-medium hover:underline hover:underline-offset-2 leading-[150%] flex flex-col gap-4 items-center justify-center`}
+                onMouseEnter={() => handleCategoryClick(index)}
+              >
+                <motion.span className={`hidden lg:block `}>
+                  {item.key}
+                </motion.span>
+                <motion.span
+                  animate={{
+                    backgroundColor:
+                      index === activeIndex
+                        ? '#ffff'
+                        : 'rgba(255,255,255,0.50)',
+                  }}
+                  className='w-1.5 h-1.5 rounded-full block lg:hidden'
+                ></motion.span>
+              </button>
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>
