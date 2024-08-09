@@ -1,5 +1,6 @@
 // src/components/organisms/Partners.js
 
+import { placeholder } from '@repo/ui/assets/icons/index';
 import { cn } from '@repo/ui/lib/utils';
 import Image, { StaticImageData } from 'next/image';
 
@@ -16,14 +17,14 @@ const PartnerSlider = ({ partners, className }: PartnersProps) => {
   return (
     <div
       className={cn(
-        'max-lg:w-screen max-lg:-ml-8 flex items-center justify-center flex-wrap gap-4',
+        'max-lg:w-screen mx-auto flex items-center flex-wrap justify-center gap-4',
         className
       )}
     >
       {partners.map((item, key) => (
         <div key={key} className='bg-[#f9f9f9] rounded'>
           <Image
-            src={item.img}
+            src={item.img || placeholder.src}
             alt='partners'
             width={400}
             height={400}

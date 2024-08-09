@@ -1,9 +1,4 @@
-import {
-  CardProps,
-  PageTitleProps,
-  QnaItem,
-  Service,
-} from '@/types/what-we-do';
+import { CardProps, PageTitleProps, QnaItem } from '@/types/what-we-do';
 
 import Separator from '@/components/molecules/seperator/Separator';
 import PageTitle from '@/components/molecules/What-we-do/capabilities/PageTitle';
@@ -37,86 +32,6 @@ export const cardsData: CardProps[] = [
     title: 'Sustained Culture Shift',
     description:
       'We foster a culture that ensures alignment and engagement in new ways of working, facilitating long-term success.',
-  },
-];
-
-const ourServices: Service[] = [
-  {
-    title: 'Software Development Consulting',
-    description:
-      "We dive deep into your organization's unique requirements, designing every solution to reflect and incorporate your specific business needs. From concept definition to risk assessment and competitor analysis, we explore the entire user journey and build accordingly. Our team also provides expert insights into selecting the most suitable technology stack, offering a detailed assessment of technology pros and cons to kickstart your software development project on the right path.",
-  },
-  {
-    title: 'Software Product Development',
-    description:
-      'Software product development demands commitment and attention to detail, starting with prototyping and design to product development, testing, deployment, and support. Our dedication extends through the entire lifecycle, ensuring rigorous testing, seamless deployment, and post-launch support. It’s all about creating an exceptional product experience through a comprehensive customized approach.',
-  },
-  {
-    title: 'Custom Software Development',
-    description:
-      'For us, custom software development is about creating perfect, scalable, and one-of-a-kind solutions. Whether it’s web or mobile software products that align with your unique business vision and company culture, or even cater to your individual needs, we are here to help. When off-the-shelf solutions fall short, our custom software keeps you connected with your customers and addresses any in-house challenges that may arise along your business journey.',
-  },
-  {
-    title: 'Software Enhancement',
-    description:
-      'To make your software competitive, our development services include fine-tuning your solutions and optimizing them with advanced technologies like AI, AR/VR, blockchain, and IoT. We also refine UI/UX for greater intuitiveness, strengthen security, fix bugs faster, accelerate speed and responsiveness, and ensure compatibility across various operating systems and devices.',
-  },
-  {
-    title: 'Software Integration Services',
-    description:
-      'We’re experts in API development and integration of third-party services such as CRM, payment systems, ERP, DMS, and EHR. Our work extends beyond these, catering to a wide array of technological needs aligned with your goals, preferences, business needs, tech stack, or industry. From architectural design to post-launch, we tackle all implementation and software integration hurdles, ensuring a smooth transition to updated systems and optimized performance to maximize ROI.',
-  },
-  {
-    title: 'Software Modernization',
-    description:
-      'We guarantee effective updates to existing solutions and sound architectural improvements. We start with an evaluation of your software, analyzing relevant documents and reviewing code. Our team identifies crucial points for modernization, from code refactoring to cloud migration, crafting the optimal strategy tailored to your needs. We ensure seamless modernization while preserving the core essence of your original software. If you prefer Agile and DevOps methodologies, we are ready to accommodate.',
-  },
-];
-
-const cooperationModel: Service[] = [
-  {
-    title: 'Scenario 1: IT Staff Augmentation',
-    description:
-      'If you have an existing team, our staff augmentation services provide the additional muscle needed to address technical challenges, bridge skill gaps, and advance your projects. This model prioritizes flexibility and rapid deployment, making it ideal for time-sensitive situations. Whether you need niche expertise or additional resources for a sprint, our staff augmentation solutions meet your specific needs.',
-  },
-  {
-    title: 'Scenario 2: Dedicated Development Teams',
-    description:
-      'Need a team of engineers dedicated to your business for an entire project or a longer engagement? We assemble a team tailored to your specific needs, both in terms of skills and industry knowledge. This option is ideal for ongoing projects where you want to supplement your in-house team with an external unit, eliminating time-consuming and expensive local hiring. It works well when you have on-site engineers but need additional ones for a distinct project segment or wish to streamline management responsibilities.',
-  },
-
-  {
-    title: 'Scenario 3: CTO as a Service (CTOaaS)',
-    description:
-      'If you require more involvement in planning and estimation, our CTO as a Service (CTOaaS) provides a seasoned tech leader to assist in product development, communicate technical matters to investors, assess quality, and create technical roadmaps for your project.',
-  },
-  {
-    title: 'Scenario 4: Software Project Outsourcing',
-    description:
-      'When you have a project in mind and need a trusted outsourcing partner, we can help define the scope of work and manage your digital journey from start to finish. This allows your core team to focus on other critical priorities.',
-  },
-];
-
-const ourApproach: Service[] = [
-  {
-    title: 'Quality Control',
-    description:
-      'Your security and effective risk management are crucial. Our developers are well-versed in SDLC policy, providing penetration testing, regular code reviews, and continuous monitoring of vulnerabilities.',
-  },
-  {
-    title: 'Transparency',
-    description:
-      'Transparency is at the heart of our approach. We maintain regular communication with stakeholders, ensuring they are informed about project progress. Our reporting provides clear insights into project developments and milestones.',
-  },
-  {
-    title: 'Flexibility',
-    description:
-      'Reach out, and within 48 hours, we’ll have CVs of top developers who meet your requirements in your inbox. We can kick off an engagement within two weeks or less. Catalyst ensures responsiveness and rapid scaling, flexible project requirements, and contractual changes to meet your needs.',
-  },
-  {
-    title: 'Software Engineering Methodologies',
-    description:
-      'We leverage Scrum, Kanban, Test-Driven Development (TDD), Behavior-Driven Development (BDD), Domain-Driven Design (DDD), and DevOps methodologies to ensure an efficient software development process aligned with your objectives.',
   },
 ];
 

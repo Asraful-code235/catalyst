@@ -2,6 +2,7 @@ import { ApplicationDesignAndDevelopment } from '@/components/template/what-we-d
 import { BlockchainCryptocurrency } from '@/components/template/what-we-do/capabilities/blockchain-cryptocurrency';
 import { BrandDevelopmentPositing } from '@/components/template/what-we-do/capabilities/brand-development-positioning';
 import { BusinessTransformation } from '@/components/template/what-we-do/capabilities/business-transformation';
+import { CloudServices } from '@/components/template/what-we-do/capabilities/cloud-services';
 import { CyberSecurity } from '@/components/template/what-we-do/capabilities/cyber-security';
 import { FinanceStrategy } from '@/components/template/what-we-do/capabilities/finance-strategy';
 import { GoToMarketStrategy } from '@/components/template/what-we-do/capabilities/go-to-market-strategy';
@@ -17,6 +18,7 @@ export {
   BlockchainCryptocurrency,
   BrandDevelopmentPositing,
   BusinessTransformation,
+  CloudServices,
   CyberSecurity,
   FinanceStrategy,
   GoToMarketStrategy,
