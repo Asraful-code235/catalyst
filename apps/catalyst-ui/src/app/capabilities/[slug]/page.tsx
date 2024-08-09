@@ -3,6 +3,7 @@ import {
   BlockchainCryptocurrency,
   BrandDevelopmentPositing,
   BusinessTransformation,
+  CloudServices,
   CyberSecurity,
   FinanceStrategy,
   GoToMarketStrategy,
@@ -30,6 +31,9 @@ export default async function Capabilities({
       break;
     case 'blockchain-cryptocurrency':
       content = <BlockchainCryptocurrency />;
+      break;
+    case 'cloud-services':
+      content = <CloudServices />;
       break;
     case 'cyber-security':
       content = <CyberSecurity />;

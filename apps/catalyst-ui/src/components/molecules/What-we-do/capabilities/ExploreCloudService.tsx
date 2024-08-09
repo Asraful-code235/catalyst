@@ -1,3 +1,5 @@
+import Text from '@repo/ui/components/atoms/Text';
+import Title from '@repo/ui/components/atoms/Title';
 import {
   Select,
   SelectContent,
@@ -6,24 +8,43 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@repo/ui/components/molecules/select';
-import { Module } from 'utils';
+import Separator from '../../seperator/Separator';
 
-export default function ExploreCloudService({ data }: Module) {
-  if (!data) return null;
+interface ExploreCloudServiceProps {
+  title: string;
+  description: string;
+  items: {
+    title: string;
+    value: string;
+  }[];
+
+  className?: string;
+}
+
+export default function ExploreCloudService({
+  title,
+  description,
+  items,
+  className,
+}: ExploreCloudServiceProps) {
   return (
-    <section className='max-w-[1440px] mx-auto p-8 lg:px-[94px] lg:py-[94px] '>
+    <section className=''>
       <div className='flex flex-col gap-8 lg:gap-[42px]'>
-        <h2 className='text-[32px] max-sm:max-w-[266px] lg:text-[64px] font-medium'>
-          {data?.title}
-        </h2>
+        <Title
+          type='h2'
+          size='medium'
+          className='text-[32px] max-sm:max-w-[266px] lg:text-[64px] font-medium'
+        >
+          {title}
+        </Title>
         <div>
           <Select>
             <SelectTrigger className='w-full border-[0.5px] border-[#1A1A1A] py-3 rounded-none'>
-              <SelectValue placeholder={`${data?.items[0]?.title}`} />
+              <SelectValue placeholder={`${items[0]?.title}`} />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                {data?.items?.map((service: Module, key: number) => (
+                {items?.map((service, key: number) => (
                   <SelectItem
                     key={key}
                     value={service.value}
@@ -36,22 +57,8 @@ export default function ExploreCloudService({ data }: Module) {
             </SelectContent>
           </Select>
         </div>
-        <p>{data?.description}</p>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='1252'
-          height='2'
-          viewBox='0 0 1252 2'
-          fill='none'
-          className='w-full mx-auto'
-        >
-          <path
-            d='M0 1L1252 0.999883'
-            stroke='#1A1A1A'
-            strokeOpacity='0.25'
-            strokeWidth='0.5'
-          />
-        </svg>
+        <Text>{description}</Text>
+        <Separator />
       </div>
     </section>
   );
