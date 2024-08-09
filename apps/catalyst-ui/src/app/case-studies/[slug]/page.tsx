@@ -1,6 +1,8 @@
-import CaseStudyETR from '@/components/case-studies/407etr/CaseStudyETR';
-import CaseStudyLaMemoire from '@/components/case-studies/CaseStudyLaMemoire/CaseStudyLaMemoire';
-import CaseStudyTradible from '@/components/case-studies/tradible/CaseStudyTradible';
+import {
+  CaseStudyETR,
+  LaMemoire,
+  Tradible,
+} from '@/components/pages/case-study';
 
 interface CaseStudyDataProps {
   params: {
@@ -14,13 +16,13 @@ export default async function CaseStudyDetailsPage({
 
   switch (slug) {
     case 'tradible':
-      content = <CaseStudyTradible />;
+      content = <Tradible />;
       break;
     case '407-etr':
       content = <CaseStudyETR />;
       break;
     case 'la-memoire':
-      content = <CaseStudyLaMemoire />;
+      content = <LaMemoire />;
       break;
 
     default:

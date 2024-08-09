@@ -1,5 +1,5 @@
-import ContactUsPage from '@/components/contact/ContactUsPage';
+import { ContactUs } from '@/components/pages/contact-us';
 
 export default function page() {
-  return <ContactUsPage />;
+  return <ContactUs />;
 }

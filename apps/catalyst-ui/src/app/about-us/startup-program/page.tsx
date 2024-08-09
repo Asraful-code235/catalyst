@@ -1,4 +1,4 @@
-import StartupProgram from '@/components/about/startup-program/StartupProgram';
+import { StartupProgram } from '@/components/pages/about';
 
 export default function page() {
   return <StartupProgram />;

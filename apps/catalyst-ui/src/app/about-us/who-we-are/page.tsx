@@ -1,5 +1,5 @@
-import AboutUs from '@/components/about/about-us/AboutUs';
+import { WhoWeAre } from '@/components/pages/about';
 
 export default async function page() {
-  return <AboutUs />;
+  return <WhoWeAre />;
 }

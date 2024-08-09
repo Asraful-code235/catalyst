@@ -1,5 +1,5 @@
-import PartnersPage from '@/components/about/partners/PartnersPage';
+import { Partners } from '@/components/pages/about';
 
 export default async function page() {
-  return <PartnersPage />;
+  return <Partners />;
 }
