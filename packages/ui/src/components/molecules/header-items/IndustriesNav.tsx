@@ -80,19 +80,19 @@ export default function IndustriesNav() {
   return (
     <section className="w-full h-auto border-b border-[#1A1A1A] bg-white py-6  max-lg:hidden">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
-        <div className="w-[714px] ml-auto grid grid-cols-3">
+        <div className="w-[727px] ml-auto grid grid-cols-3">
           <div className="w-fit">
             <div className="paragraph text-left font-bold text-sm pl-9">
               Industries
             </div>
           </div>
           <div className="w-full col-span-2">
-            <ul className="grid grid-cols-3 gap-4 w-full ">
+            <ul className="grid grid-cols-3 gap-4 w-full tracking-normal ">
               {industriesItems.map((item, index) => (
                 <a
                   key={index}
                   href={`/industries/${item.slug}`}
-                  className={`${[1, 4].includes(index) ? "pl-[42px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph text-xs hover:font-medium`}
+                  className={`${[1, 4].includes(index) ? "pl-[48px] text-start" : "text-start "} w-fit whitespace-nowrap paragraph text-xs hover:font-medium`}
                 >
                   {item.title}
                 </a>
@@ -100,7 +100,7 @@ export default function IndustriesNav() {
             </ul>
           </div>
         </div>
-        <div className="w-[714px] ml-auto flex flex-col gap-8">
+        <div className="w-[727px] ml-auto flex flex-col gap-8">
           <p className="paragraph text-left font-bold text-sm pl-9">
             Capabilities
           </p>
@@ -112,7 +112,7 @@ export default function IndustriesNav() {
                     {item.title}
                   </div>
                 </div>
-                <div className="w-full col-span-2 flex gap-[15px] ">
+                <div className="w-full col-span-2 grid grid-cols-2 tracking-normal ">
                   <ul className="flex flex-col gap-4 w-fit">
                     {item.children.slice(0, 5).map((child, childIndex) => (
                       <li
@@ -125,7 +125,7 @@ export default function IndustriesNav() {
                       </li>
                     ))}
                   </ul>
-                  <ul className="flex flex-col gap-4 ">
+                  <ul className="flex flex-col gap-4 w-full -ml-6">
                     {item.children.slice(5).map((child, childIndex) => (
                       <li
                         key={childIndex}
