@@ -1,3 +1,4 @@
+import Separator from '@/components/molecules/seperator/Separator';
 import Text from '@repo/ui/components/atoms/Text';
 
 const statisticsItems = [
@@ -20,17 +21,17 @@ export default function Statistics() {
         navigate challenges, optimize operations, and drive sustainable growth.
       </Text>
       <section className='flex flex-col'>
-        <div className='grid grid-cols-1 lg:grid-cols-5 gap-x-[90px] gap-y-12 max-lg:divide-y max-lg:divide-gray-200 max-lg:gap-y-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-x-[32px] xl:gap-x-[70px] gap-y-12 max-lg:divide-y max-lg:divide-gray-200 max-lg:gap-y-6'>
           <Text
             type='p'
-            className='col-span-3 font-medium  mb-4 w-fit lg:text-2xl'
+            className='col-span-3 font-medium mb-4 w-full lg:text-2xl'
           >
             Key Statistics
           </Text>
           {statisticsItems.map((item) => (
             <div
               key={item.id}
-              className=' col-span-3 lg:col-span-1 text-left flex flex-col gap-4 lg:gap-6 max-lg:pt-4 '
+              className=' col-span-3 lg:col-span-1 text-left flex flex-col gap-4 lg:gap-6 max-lg:pt-4 lg:mr-6'
             >
               <Text
                 type='p'
@@ -45,36 +46,7 @@ export default function Statistics() {
           ))}
         </div>
       </section>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='1252'
-        height='2'
-        viewBox='0 0 1252 2'
-        fill='none'
-        className='hidden lg:block w-full'
-      >
-        <path
-          opacity='0.4'
-          d='M1252 1L0 1'
-          stroke='#1A1A1A'
-          strokeWidth='0.5'
-        />
-      </svg>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='366'
-        height='2'
-        viewBox='0 0 366 2'
-        fill='none'
-        className='-mt-10 mx-auto w-full lg:hidden'
-      >
-        <path
-          d='M0 1L366 1.00003'
-          stroke='#1A1A1A'
-          strokeOpacity='0.25'
-          strokeWidth='0.5'
-        />
-      </svg>
+      <Separator />
     </section>
   );
 }
