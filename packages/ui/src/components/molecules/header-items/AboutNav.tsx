@@ -13,7 +13,7 @@ export default function AboutNav() {
       className=" w-full h-auto border-b border-[#1A1A1A] bg-white py-6 max-lg:hidden"
     >
       <div className="max-w-[1440px] mx-auto">
-        <div className="w-[714px] ml-auto grid grid-cols-3">
+        <div className="w-[727px]  ml-auto grid grid-cols-3">
           <div className="w-fit">
             <div className="paragraph text-left font-bold text-sm pl-9">
               About Us

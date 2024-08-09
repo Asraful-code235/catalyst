@@ -8,7 +8,7 @@ export default function CapabilitiesNav() {
   return (
     <section className=" w-full h-auto border-b border-[#1A1A1A] bg-white py-6  max-lg:hidden">
       <div className="max-w-[1440px] mx-auto">
-        <div className="w-[674px] ml-auto grid grid-cols-3">
+        <div className="w-[727px]  ml-auto grid grid-cols-3">
           <div className="col-span-1">
             <div className="paragraph text-left font-bold text-sm pl-8">
               About Us
