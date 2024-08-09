@@ -1,4 +1,4 @@
-import LayoutProvider from '@/components/providers/LayoutProvider';
+import LayoutProvider from '@/providers/LayoutProvider';
 import '@repo/ui/globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';

@@ -1,5 +1,5 @@
-import CaseStudiesPage from '@/components/case-studies/CaseStudiesPage';
+import { CaseStudyHomePage } from '@/components/pages/case-study';
 
 export default function page() {
-  return <CaseStudiesPage />;
+  return <CaseStudyHomePage />;
 }

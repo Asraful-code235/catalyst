@@ -155,10 +155,6 @@
     font-weight: 400;
   }
 
-  .listItemSectionAccordion {
-    @apply text-xs lg:text-base font-medium leading-6 lg:leading-8;
-  }
-
   html,
   body {
     max-width: 100vw;
