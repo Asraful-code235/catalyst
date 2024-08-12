@@ -30,7 +30,7 @@ export default function InsightsNav() {
   return (
     <section className="w-full h-auto border-b border-[#1A1A1A] bg-white py-6  max-lg:hidden">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
-        <div className="w-[714px] ml-auto flex flex-col gap-8">
+        <div className="w-[726px] ml-auto flex flex-col gap-8">
           <div className="flex flex-col gap-[42px]">
             {insightItems.map((item, index) => (
               <div key={index} className="grid grid-cols-3 gap-4 w-full">

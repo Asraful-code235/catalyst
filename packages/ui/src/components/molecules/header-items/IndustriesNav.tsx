@@ -56,10 +56,10 @@ const whatWeDoItems = [
         title: "IT Services for Startups",
         slug: "it-services-startups",
       },
-      {
-        title: "Strategic Management Services",
-        slug: "strategic-management-services",
-      },
+      // {
+      //   title: "Strategic Management Services",
+      //   slug: "strategic-management-services",
+      // },
     ],
   },
 ];
@@ -80,7 +80,7 @@ export default function IndustriesNav() {
   return (
     <section className="w-full h-auto border-b border-[#1A1A1A] bg-white py-6  max-lg:hidden">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
-        <div className="w-[727px] ml-auto grid grid-cols-3">
+        <div className="w-[726px] ml-auto grid grid-cols-3">
           <div className="w-fit">
             <div className="paragraph text-left font-bold text-sm pl-9">
               Industries

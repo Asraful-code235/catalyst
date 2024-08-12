@@ -10,8 +10,7 @@
   "types": "./index.d.ts",
   "dependencies": {
     "react": "^18.2.0",
-    "react-toastify": "^10.0.5",
-    "@repo/ui": "workspace:^"
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
