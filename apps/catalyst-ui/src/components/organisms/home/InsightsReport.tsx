@@ -114,8 +114,8 @@ export default function InsightsReport() {
             <div className='max-lg:order-1'>
               <Image
                 src={insight.img}
-                width={800}
-                height={282}
+                width={1600}
+                height={800}
                 alt={insight.title}
                 className='w-full aspect-auto object-cover object-center h-[63px] lg:h-[282px]'
               />

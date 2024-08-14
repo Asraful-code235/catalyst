@@ -81,8 +81,8 @@ export function CaseStudyHomePage() {
           <ImageAtom
             src={Tradible}
             alt='who we are'
-            width={800}
-            height={400}
+            width={1400}
+            height={800}
             className='object-center object-cover aspect-auto w-[198.992px] h-[47px] lg:w-[436px] lg:h-[103px]'
           />
 

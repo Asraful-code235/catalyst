@@ -2,11 +2,9 @@
 
 import Separator from '@/components/molecules/seperator/Separator';
 import { GridSectionProps } from '@/types/case-study';
-import { placeholder } from '@repo/ui/assets/icons/index';
 import Text from '@repo/ui/components/atoms/Text';
 import Title from '@repo/ui/components/atoms/Title';
 import { cn } from '@repo/ui/lib/utils';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
 interface Props {
@@ -35,16 +33,10 @@ export default function CaseStudiesGridSection({ data, isLastSection }: Props) {
             rtl ? 'order-1' : 'order-2'
           )}
         >
-          <Image
-            src={data?.image}
-            placeholder='blur'
-            blurDataURL={placeholder.src}
-            alt={'image'}
-            loading='lazy'
-            decoding='async'
-            quality={'85'}
-            layout='fill'
-            className='w-full h-auto object-cover object-center aspect-auto'
+          <img
+            src={data?.image.src}
+            alt='grid hero image'
+            className='w-full h-full object-cover object-center aspect-auto'
           />
         </div>
         <div

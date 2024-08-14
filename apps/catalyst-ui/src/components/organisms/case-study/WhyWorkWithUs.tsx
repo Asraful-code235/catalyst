@@ -36,9 +36,9 @@ export default function WhyPartnerWithUs({ data }: Props) {
                 blurDataURL={placeholder.src}
                 loading='lazy'
                 decoding='async'
-                quality={'85'}
-                width={600}
-                height={400}
+                quality={'95'}
+                width={1900}
+                height={800}
                 className='w-full h-full object-center object-cover'
               />
             </div>

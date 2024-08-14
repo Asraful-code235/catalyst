@@ -23,8 +23,8 @@ export default function ScheduleConsultation() {
       <div className='hidden lg:block'>
         <Image
           src={scImage}
-          width={600}
-          height={263}
+          width={1600}
+          height={1200}
           placeholder='blur'
           blurDataURL={placeholder.src}
           loading='lazy'

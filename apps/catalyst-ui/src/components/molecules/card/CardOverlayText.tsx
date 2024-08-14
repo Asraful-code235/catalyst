@@ -23,8 +23,8 @@ export default function CardOverlayText({
         <ImageAtom
           src={image}
           alt={title}
-          width={400}
-          height={400}
+          width={800}
+          height={800}
           className='w-full h-full aspect-auto'
         />
         <div className='absolute hidden p-3 bg-primary inset-0 lg:flex flex-col items-center justify-center gap-[62px] w-full h-full opacity-0 group-hover:opacity-100'>

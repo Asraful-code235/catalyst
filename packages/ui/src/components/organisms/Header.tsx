@@ -55,7 +55,7 @@ export default function Header() {
             <img
               src={logo.src}
               alt="logo"
-              className="w-[68px] h-[14px] lg:h-[20.115px] lg:w-[90.82px]"
+              className="w-[68px] h-[14px] lg:h-[20.115px] lg:w-[90.82px] object-center object-cover"
             />
           </a>
           <nav className="paragraph hidden lg:flex justify-items-center">

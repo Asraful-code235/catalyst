@@ -1,7 +1,7 @@
+import ImageAtom from '@/components/atoms/Image';
 import Separator from '@/components/molecules/seperator/Separator';
 import Text from '@repo/ui/components/atoms/Text';
 import Title from '@repo/ui/components/atoms/Title';
-import Image from 'next/image';
 import etr from '../../../../public/assets/icons/svg/407.svg';
 import boston from '../../../../public/assets/icons/svg/boston.svg';
 import miami from '../../../../public/assets/icons/svg/miami.svg';
@@ -21,15 +21,13 @@ export default function OurClients() {
       <Separator />
       <section className='flex items-center justify-center gap-4 lg:gap-[42px] flex-wrap  '>
         {[toronto, tradible, miami, boston, etr].map((client, index) => (
-          <div key={index}>
-            <Image
+          <div key={index} className='bg-[#f6f6f6] rounded-[10px]'>
+            <ImageAtom
               src={client}
-              width={400}
-              loading='lazy'
-              decoding='async'
-              height={400}
+              width={1600}
+              height={1200}
               alt='clients'
-              className='object-cover object-center w-[191px] h-[92px] aspect-auto max-lg:w-[69px] max-lg:h-[34px]'
+              className='object-cover object-center bg-transparent w-[191px] h-[92px] aspect-auto max-lg:w-[69px] max-lg:h-[34px]'
             />
           </div>
         ))}
