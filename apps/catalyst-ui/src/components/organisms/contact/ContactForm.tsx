@@ -80,7 +80,20 @@ export const ContactForm = () => {
               File selected: {file.name}
             </p>
           ) : (
-            <div className='description p-8 lg:p-14 flex items-center justify-center flex-col gap-3'>
+            <div className='description p-8 lg:p-14 flex items-center justify-center flex-col gap-4 lg:gap-3'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='28'
+                height='28'
+                viewBox='0 0 28 28'
+                fill='none'
+                className='max-lg:w-[21.333px] max-lg:h-[21.333px]'
+              >
+                <path
+                  d='M12.25 21V6.7375L7.7 11.2875L5.25 8.75L14 0L22.75 8.75L20.3 11.2875L15.75 6.7375V21H12.25ZM3.5 28C2.5375 28 1.71383 27.6576 1.029 26.9727C0.344166 26.2879 0.00116667 25.4637 0 24.5V19.25H3.5V24.5H24.5V19.25H28V24.5C28 25.4625 27.6576 26.2868 26.9727 26.9727C26.2879 27.6588 25.4637 28.0012 24.5 28H3.5Z'
+                  fill='#1A1A1A'
+                />
+              </svg>
               <p className='description'>
                 <span className='font-medium '>Choose a file</span> or drag it
                 here.

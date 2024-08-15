@@ -6,9 +6,6 @@ import Title from '@repo/ui/components/atoms/Title';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { useForm } from 'react-hook-form';
 
 const socialLinks = [
   {
@@ -29,53 +26,6 @@ const socialLinks = [
 ];
 
 export function ContactUs() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    watch,
-  } = useForm();
-  const [file, setFile] = useState<File | null>(null);
-  const [uploadStatus, setUploadStatus] = useState<
-    'idle' | 'uploading' | 'success' | 'error'
-  >('idle');
-
-  const onDrop = (acceptedFiles: File[]) => {
-    if (acceptedFiles.length > 0) {
-      setFile(acceptedFiles[0] || null);
-    }
-  };
-
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: '.pdf,.docx,.jpg,.jpeg' as any,
-    onDrop,
-  });
-
-  const onSubmit = async (data: any) => {
-    try {
-      setUploadStatus('uploading');
-
-      const formData = new FormData();
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('phone', data.phone);
-      formData.append('topic', data.topic);
-      formData.append('company', data.company);
-      formData.append('company-website', data.companyWebsite);
-      formData.append('message', data.message);
-      if (file) {
-        formData.append('file', file);
-      }
-
-      console.log('formData', formData);
-
-      setUploadStatus('success');
-    } catch (error) {
-      console.error('Upload error:', error);
-      setUploadStatus('error');
-    }
-  };
-
   return (
     <section className='w-full lg:grid grid-cols-1 lg:grid-cols-6 lg:min-h-screen lg:relative'>
       <div className='col-span-4 h-full hidden lg:block '></div>
