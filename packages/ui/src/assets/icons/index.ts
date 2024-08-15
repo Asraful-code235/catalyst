@@ -8,6 +8,7 @@ import line from "./svg/line.svg";
 import menu from "./svg/menu.svg";
 import placeholder from "./svg/placeholder.svg";
 import separator from "./svg/separator.svg";
+import tradibleClient from "./svg/tradibleClient.svg";
 
 // webp
 import IndustriesConsumerPageTitle from "./webp/catalyst industries pagtitle.webp";
@@ -42,7 +43,7 @@ import Miami from "./webp/miami.webp";
 import Toronto from "./webp/toronto.webp";
 import Tradible from "./webp/tradible.webp";
 import tradibleHeaderBigImage from "./webp/tradibleheaderbigImage.webp";
-import tradibleHeaderSmallImage from "./webp/tradibleheadersmallimage.webp";
+import tradibleHeaderSmallImage from "./png/tradibleheadersmallimage.png";
 import tradibleServiceImage from "./webp/tradibleserviceimage.webp";
 import LamemoireBigHeaderImage from "./webp/lamemoireBigheaderImage.webp";
 import LamemoireBigSmallImage from "./webp/lamemoireheadersmallimage.webp";
@@ -63,6 +64,7 @@ export {
   menu,
   separator,
   placeholder,
+  tradibleClient,
 
   // partners
   aws,

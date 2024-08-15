@@ -50,8 +50,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
                   <ImageAtom
                     src={data?.smallImage || placeholder.src}
                     alt={data?.title || 'case-study'}
-                    width={1200}
-                    height={434}
+                    width={1900}
+                    height={800}
                     className='w-full max-w-[402px] max-h-[175px] aspect-auto object-center object-cover lg:object-contain'
                   />
                 </div>
@@ -59,8 +59,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 <ImageAtom
                   src={data?.smallImage || placeholder.src}
                   alt={data?.title || 'case-study big'}
-                  width={1200}
-                  height={434}
+                  width={1900}
+                  height={800}
                   className='w-full h-[130px] lg:h-[198px] object-cover object-center aspect-auto'
                 />
               )}
@@ -75,7 +75,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
                 alt={data?.title || 'case-study-big'}
                 loading='lazy'
                 decoding='async'
-                quality={'85'}
+                quality={'100'}
                 layout='fill'
                 className='w-full h-full object-cover object-center aspect-auto'
               />

@@ -12,13 +12,13 @@ export default function WhoWeAreSection() {
         src={AboutUsImage}
         alt='who we are'
         width={800}
-        height={400}
+        height={800}
         placeholder='blur'
         blurDataURL={placeholder.src}
         className='max-lg:h-[241px] max-h-[465px] w-full object-cover object-center h-full aspect-auto'
         loading='lazy'
         decoding='async'
-        quality={'85'}
+        quality={'100'}
       />
       <div className='flex flex-col justify-center gap-4 lg:gap-8'>
         <Title

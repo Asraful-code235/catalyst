@@ -45,8 +45,8 @@ export default function CaseStudy() {
         <ImageAtom
           src={caseStudyData[hoveredItem]?.img || Tradible}
           alt={caseStudyData[hoveredItem]?.title || 'tradible'}
-          width={800}
-          height={375}
+          width={1600}
+          height={1200}
           className='w-full object-cover object-center h-full max-lg:h-[106px]'
         />
         <div className='absolute inset-0 px-8 py-4 lg:hidden h-full flex flex-col justify-between'>

@@ -18,8 +18,8 @@ const defaultStyles = `
 const ImageAtom: React.FC<ImageAtomProps> = ({
   src,
   alt,
-  width = 1200,
-  height = 400,
+  width = 1600,
+  height = 1000,
   className,
 }) => {
   return (
@@ -32,6 +32,7 @@ const ImageAtom: React.FC<ImageAtomProps> = ({
       blurDataURL={placeholder.src}
       loading='lazy'
       decoding='async'
+      quality={100}
       className={cn(defaultStyles, className)}
     />
   );

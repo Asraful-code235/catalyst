@@ -37,7 +37,7 @@ export default function TwoGridSection({
                   <>
                     <ul className='flex flex-col list-disc gap-2'>
                       {description?.items?.map((child, key: number) => (
-                        <li className='ml-4' key={key}>
+                        <li className='ml-4 lg:ml-6' key={key}>
                           <Text>{child.item}</Text>
                         </li>
                       ))}

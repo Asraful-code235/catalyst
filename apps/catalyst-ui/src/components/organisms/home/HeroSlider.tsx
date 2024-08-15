@@ -74,44 +74,25 @@ const HeroSlider = () => {
     <section className='relative w-full h-[334px] lg:h-[602px] overflow-hidden'>
       <AnimatePresence mode='wait'>
         <motion.div
-          key={sliderItems[previousIndex]!.key}
+          key={sliderItems[activeIndex]!.key}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className='absolute w-full h-full'
-        >
-          <Image
-            src={sliderItems[previousIndex]?.img?.src || HeroSlider1.src}
-            alt={sliderItems[previousIndex]?.title || 'Default Title'}
-            layout='fill'
-            placeholder='blur'
-            blurDataURL={placeholder.src}
-            loading='lazy'
-            decoding='async'
-            objectFit='cover'
-            className='object-cover'
-          />
-        </motion.div>
-        <motion.div
-          key={sliderItems[activeIndex]!.key}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.1, ease: 'easeOut' }}
           className='absolute w-full h-full'
           onAnimationComplete={() => setShowText(true)}
         >
           <Image
             src={sliderItems[activeIndex]?.img?.src || HeroSlider1.src}
             alt={sliderItems[activeIndex]?.title || 'Default Title'}
-            layout='fill'
             placeholder='blur'
             blurDataURL={placeholder.src}
             loading='lazy'
             decoding='async'
+            width={1900}
+            height={1200}
             objectFit='cover'
-            className='object-cover'
+            className='object-cover h-full w-full object-center'
           />
         </motion.div>
       </AnimatePresence>

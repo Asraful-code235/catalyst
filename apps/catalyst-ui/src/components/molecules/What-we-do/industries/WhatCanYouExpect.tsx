@@ -24,9 +24,9 @@ export default function WhatYouCanExpect({ data }: Props) {
         <Image
           loading='lazy'
           decoding='async'
-          width={600}
-          height={600}
-          quality={85}
+          width={1200}
+          height={1000}
+          quality={100}
           placeholder='blur'
           blurDataURL={placeholder.src}
           src={image}
