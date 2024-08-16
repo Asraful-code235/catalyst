@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "postbuild": "pnpm --filter ./packages/utils build",
     "utils:build": "pnpm --filter ./packages/utils build",
     "web:dev": "pnpm --filter ./apps/web dev",
     "catalyst:dev": "pnpm --filter ./apps/catalyst-ui dev",
