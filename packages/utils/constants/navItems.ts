@@ -3,9 +3,10 @@ import { NavItem } from "../types/index.js";
 export const navItems: NavItem[] = [
   {
     title: "What We Do",
-    slug: "what-we-do",
+    slug: "what-we-do ",
     children: true,
   },
+
   {
     title: "Case Studies",
     slug: "case-studies",
