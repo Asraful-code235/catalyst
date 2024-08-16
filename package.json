@@ -2,7 +2,7 @@
   "name": "catalyst-venture-studio",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "pnpm --filter ./packages/utils build && turbo build",
     "dev": "turbo dev",
     "postbuild": "pnpm --filter ./packages/utils build",
     "utils:build": "pnpm --filter ./packages/utils build",
