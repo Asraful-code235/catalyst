@@ -20,7 +20,7 @@ export default function CapabilitiesNav() {
                 <a
                   href={`${item.slug}`}
                   key={index}
-                  className="paragraph text-start hover:font-medium"
+                  className="paragraph text-start hover:text-primary"
                 >
                   {item.title}
                 </a>

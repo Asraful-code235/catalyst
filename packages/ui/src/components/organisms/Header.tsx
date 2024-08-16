@@ -13,6 +13,7 @@ import CapabilitiesNav from "../molecules/header-items/CapabilitiesNav";
 import InsightsNav from "../molecules/header-items/InsightsNav";
 import AboutNav from "../molecules/header-items/AboutNav";
 import MobileNav from "../molecules/header-items/MobileNav";
+import { Button } from "../atoms/button";
 
 export default function Header() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -48,9 +49,9 @@ export default function Header() {
   return (
     <header className="bg-white fixed top-0 left-0 right-0 z-50">
       <div
-        className={`${isMobileNavVisible ? " " : "border-b border-[#1A1A1A]"}`}
+        className={`${isMobileNavVisible ? " " : "border-b border-[#1A1A1A] z-40"}`}
       >
-        <div className="max-lg:p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto flex items-center justify-between gap-4 overflow-hidden relative">
+        <div className="max-lg:p-4 lg:pl-[42px] h-12 max-w-[1440px] mx-auto flex items-center justify-between gap-4  relative">
           <a href="/">
             <img
               src={logo.src}
@@ -66,7 +67,7 @@ export default function Header() {
                   key={index}
                   href={`/${item.slug}`}
                   className={cn(
-                    "px-9 py-[17px] text-xs flex items-center gap-1.5 relative cursor-pointer border-l border-black bg-primary font-medium leading-normal"
+                    "px-9 text-xs  flex items-center gap-1.5 relative cursor-pointer border-l border-black bg-primary hover:bg-primary/90 font-medium leading-normal"
                   )}
                 >
                   {item.title}
@@ -77,10 +78,11 @@ export default function Header() {
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                   className={cn(
-                    "px-9 py-[17px] text-xs flex items-center gap-1.5 font-normal relative cursor-pointer"
+                    "px-9 py-[16px] group transition-colors duration-300 ease-in-out text-xs flex items-center gap-1.5 font-normal relative cursor-pointer",
+                    expandedIndex === index && "text-[#99e5d9]"
                   )}
                 >
-                  <span>
+                  <span className="group-hover:text-[#99e5d9] text-inherit">
                     {item?.children ? (
                       <span>{item.title}</span>
                     ) : (
@@ -89,15 +91,34 @@ export default function Header() {
                   </span>
 
                   {item.children && (
-                    <motion.img
-                      src={ChevronDown.src}
-                      alt="chevron-down"
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill={expandedIndex === index ? "#99e5d9" : "none"}
+                      xmlns="http://www.w3.org/2000/svg"
                       className={cn(
                         "w-4 h-4 transition-transform",
                         expandedIndex === index && "rotate-180"
                       )}
-                    />
+                    >
+                      <g id="mdi:chevron-up">
+                        <path
+                          id="Vector"
+                          d="M11.825 5L8 8.7085L4.175 5L3 6.1417L8 11L13 6.1417L11.825 5Z"
+                          fill={expandedIndex === index ? "#99e5d9" : "#1A1A1A"}
+                        />
+                      </g>
+                    </svg>
                   )}
+                  <div
+                    className={cn(
+                      "absolute left-0 bottom-[-0.5px] w-full h-0.5 bg-primary transition-all duration-300 ease-in-out",
+                      expandedIndex === index && item?.children
+                        ? "opacity-100 z-10"
+                        : "opacity-0 z-0"
+                    )}
+                  ></div>
                 </div>
               );
             })}
