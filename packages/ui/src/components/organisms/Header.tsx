@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, logo } from "@repo/ui/assets/icons/index";
-import { navItems } from "utils";
+import { AnimatePresence } from "framer-motion";
+import { logo } from "@repo/ui/assets/icons/index";
 import { cn } from "@repo/ui/lib/utils";
 
 import menu from "../../assets/icons/svg/menu.svg";
@@ -13,7 +12,7 @@ import CapabilitiesNav from "../molecules/header-items/CapabilitiesNav";
 import InsightsNav from "../molecules/header-items/InsightsNav";
 import AboutNav from "../molecules/header-items/AboutNav";
 import MobileNav from "../molecules/header-items/MobileNav";
-import { Button } from "../atoms/button";
+import { navItems } from "../../constants/navItems";
 
 export default function Header() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);

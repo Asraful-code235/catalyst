@@ -20,8 +20,7 @@
     "framer-motion": "^10.16.4",
     "plaiceholder": "^3.0.0",
     "react-dropzone": "^14.2.3",
-    "react-hook-form": "^7.51.5",
-    "utils": "workspace:*"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,4 +1,4 @@
-import { Module } from 'utils';
+import { Module } from '@repo/ui/types/index';
 
 export default function ListItems({ data }: Module) {
   if (!data) return null;

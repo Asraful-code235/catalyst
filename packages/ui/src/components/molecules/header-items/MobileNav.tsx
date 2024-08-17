@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { mobileNav, MobileNavType, type NavItem } from "utils";
 
 import logo from "../../../assets/icons/svg/logo.svg";
 import menu from "../../../assets/icons/svg/menu.svg";
@@ -11,6 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../accordion";
+import { mobileNav } from "../../../constants/navItems";
+import { MobileNavType } from "../../../types/index";
 
 const MobileNav = ({ onClick }: { onClick: () => void }) => {
   return (

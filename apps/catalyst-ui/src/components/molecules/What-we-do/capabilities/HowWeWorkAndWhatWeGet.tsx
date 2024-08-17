@@ -1,4 +1,4 @@
-import { Module } from 'utils';
+import { Module } from '@repo/ui/types/index';
 import Cards from './Cards';
 
 export default function HowWeWorkAndWhatWeGet({ data }: Module) {

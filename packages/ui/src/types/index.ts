@@ -10,11 +10,11 @@ export type MobileNavType = {
   children?: NavItem[];
 };
 
-export interface Module {
+export type Module = {
   _type: string;
   _key: string;
   [key: string]: any;
-}
+};
 
 export interface IndustryModules {
   [key: string]: Module[];
